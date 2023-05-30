@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>1515biubiubiu&#39;s blog</title>
+  <title>dsy&#39;s blog</title>
   <icon>https://1515biubiubiu.github.io/icon.png</icon>
   <subtitle>Life Oriented Programming</subtitle>
   <link href="https://1515biubiubiu.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://1515biubiubiu.github.io/</id>
   
   <author>
-    <name>1515biubiubiu</name>
+    <name>dsy</name>
     
   </author>
   
