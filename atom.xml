@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>1515biubiubiu&#39;s blog</title>
+  <icon>https://1515biubiubiu.github.io/icon.png</icon>
+  <subtitle>Life Oriented Programming</subtitle>
+  <link href="https://1515biubiubiu.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://1515biubiubiu.github.io/"/>
+  <updated>2023-05-05T15:22:50.000Z</updated>
+  <id>https://1515biubiubiu.github.io/</id>
+  
+  <author>
+    <name>1515biubiubiu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2、概述</title>
+    <link href="https://1515biubiubiu.github.io/785d8438/"/>
+    <id>https://1515biubiubiu.github.io/785d8438/</id>
+    <published>2023-05-27T16:17:20.556Z</published>
+    <updated>2023-05-05T15:22:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1、README</title>
+    <link href="https://1515biubiubiu.github.io/b5385ca/"/>
+    <id>https://1515biubiubiu.github.io/b5385ca/</id>
+    <published>2023-05-27T16:17:20.555Z</published>
+    <updated>2023-05-03T14:04:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本分类（&lt;a href=&quot;https://1515biubiubiu.github.io/categories/Java/&quot;&gt;Java&lt;/a&gt; &amp;gt; &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+</feed>

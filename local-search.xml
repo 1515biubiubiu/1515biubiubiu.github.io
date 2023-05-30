@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>2、概述</title>
+    <link href="/785d8438/"/>
+    <url>/785d8438/</url>
+    
+    <content type="html"><![CDATA[<p>Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java 17+。</p><p>Spring支持广泛的应用场景。在大型企业中，应用程序往往存在很长时间，并且必须运行在JDK和应用服务器上，其升级周期不受开发人员的控制。其他人可能作为嵌入服务器的单个jar运行，可能在云环境中，还有一些可能是不需要服务器的独立应用程序（例如批处理和集成工作负载）。</p><p>Spring是开源的。它有一个庞大而活跃的社区，可以根据各种实际用例提供持续的反馈。这帮助Spring在很长一段时间内成功发展。</p><h2 id="1-我们所说的“Spring”是什么意思"><a href="#1-我们所说的“Spring”是什么意思" class="headerlink" title="1. 我们所说的“Spring”是什么意思"></a>1. 我们所说的“Spring”是什么意思</h2><p>“Spring”一词在不同的上下文中意味着不同的事物。它可以用来指代Spring Framework项目本身，这就是一切的开始。随着时间的推移，其他Spring项目已经建立在Spring Framework之上。大多数情况下，当人们说“Spring”时，他们指的是整个项目系列。本参考文档侧重于基础：Spring Framework本身。</p><p>Spring Framework是分成模块的。应用程序可以选择它们需要的模块。核心是核心容器的模块，包括配置模型和依赖注入机制。除此之外，Spring Framework还为不同的应用程序架构提供了基础支持，包括消息传递，数据的事务和持久性，以及web。它还包括基于Servlet的Spring MVC Web框架，以及并行的Spring WebFlux反应式Web框架。</p><p>一个关于模块的说明：Spring的框架jar包们允许部署到JDK9的模块路径（“Jigsaw”<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：https://openjdk.org/projects/jigsaw">[1]</span></a></sup>）。为了在支持Jigsaw的应用程序中使用，Spring Framework 5 jar带有“Automatic-Module-Name”<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Automatic-Module-Name 是一个 jar 包清单文件的条目，它允许开发人员为不包含 `module-info.java` 的 jar 包定义模块名称。如果 jar 包中没有 Automatic-Module-Name条目，JDK 9 会自动使用 jar 文件的文件名（不含扩展名）作为模块名称。例如：可以在spring-core-6.0.8.jar中的META-INF目录的MANIFEST.MF文件中找到`Automatic-Module-Name: spring.core`。">[2]</span></a></sup>清单条目，这些条目定义了独立于jar工件的稳定语言级模块名称（“Spring.core“、”Spring.context“等）（jar遵循相同的命名模式，使用“-”而不是“.”，例如“Spring-core”和“Spring-context”）。当然，Spring的框架jar可以用在JDK8和9+的类路径上正常工作。</p><h2 id="2-Spring和Spring-Framework的历史"><a href="#2-Spring和Spring-Framework的历史" class="headerlink" title="2. Spring和Spring Framework的历史"></a>2. Spring和Spring Framework的历史</h2><p>Spring作为应对早期J2EE的复杂性的产品于2003年应运而生。虽然有些人认为Java EE和它的现代的继任者Jakarta EE与Spring存在竞争关系，它们实际上是互补的。Spring编程模型不包含Jakarta EE平台规范；Spring从传统EE规范所涵盖的所有相关规范、标准和技术中精选的个别规范：</p><ul><li>Servlet API (<a href="https://jcp.org/en/jsr/detail?id=340">JSR 340</a><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="JSR是Java Specification Requests的缩写，意思是Java规范提案，是指向JCP（Java Community Process）提出新增一个标准化技术规范的正式请求。340是指这个提案的编号。">[3]</span></a></sup>)</li><li>WebSocket API (<a href="https://www.jcp.org/en/jsr/detail?id=356">JSR 356</a>)</li><li>Concurrency Utilities (<a href="https://www.jcp.org/en/jsr/detail?id=236">JSR 236</a>)</li><li>JSON Binding API (<a href="https://jcp.org/en/jsr/detail?id=367">JSR 367</a>)</li><li>Bean Validation (<a href="https://jcp.org/en/jsr/detail?id=303">JSR 303</a>)</li><li>JPA (<a href="https://jcp.org/en/jsr/detail?id=338">JSR 338</a>)</li><li>JMS (<a href="https://jcp.org/en/jsr/detail?id=914">JSR 914</a>)</li><li>如果需要的话，还可以使用JTA&#x2F;JCA<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Spring框架中，JTA（Java Transaction API）和JCA（Java Connector Architecture）是用于事务协调和连接企业信息系统（EIS）的两个重要技术。Spring支持使用JTA管理分布式事务，通过JTA事务管理器，Spring可以在多个资源之间执行分布式事务，并确保事务的ACID（原子性、一致性、隔离性、持久性）属性得到维护。Spring还提供了多个JTA实现，例如Atomikos、Bitronix和JBoss Transaction。另一方面，Spring也支持使用JCA连接到EIS。 Spring为各种EIS提供了适配器，使得使用Spring的应用程序可以通过标准化的接口与EIS集成，例如JDBC和JMS适配器。使用Spring的JCA适配器，可以在Spring应用程序中使用像JDBC和JMS这样的标准API连接到EIS。">[4]</span></a></sup>设置来进行事务协调。</li></ul><p>Spring还支持依赖注入（<a href="https://www.jcp.org/en/jsr/detail?id=330">JSR 330</a>）和通用注解（<a href="https://jcp.org/en/jsr/detail?id=250">JSR 250</a>）规范。应用程序开发人员可以选择使用它们来代替Spring框架提供的特定于Spring的机制。最初，那些（那些指JSR 330和JSR 250）是基于通用<code>javax</code>包的。</p><p>从Spring Framework 6.0起，Spring已经升级到Jakarta EE 9（例如：Servlet 5.0+，JPA 3.0+），基于<code>Jakarta</code>命名空间代替传统的<code>javax</code>包。以EE 9作为最低要求并且已经支持EE 10。Spring已经做好为进一步演化的Jakarta EE API提供开箱即用的支持的准备。Spring Framework 6.0完全兼容Tomcat 10.1，Jetty 11和Undertow 2.3作为web服务器。也与Hibernate ORM 6.1兼容。</p><p>随着时间的推移，Java&#x2F;Jakarta EE在应用程序开发中的角色发生了变化。在J2EE和Spring早期，应用程序是为了部署到一个应用服务器而创建的。如今，在Spring Boot的帮助下，应用程序以DevOps和云友好的方式创建，Servlet容器被嵌入其中，而且轻松易改。从Spring Framework 5开始，一个WebFlux应用程序甚至不直接使用Servlet API并且可以运行在不是Servlet容器的服务器上（如Netty）。</p><p>Spring继续创新和演进。除了Spring Framework外，还有其他项目，例如Spring Boot，Spring Security，Spring Data，Spring Cloud，Spring Batch等。重要的是记住每个项目都有自己的源码仓库，问题追踪器，发布节奏。请访问<a href="spring.io/projects">spring.io&#x2F;projects</a>查看完整的Spring项目列表。</p><h2 id="3-设计理念"><a href="#3-设计理念" class="headerlink" title="3. 设计理念"></a>3. 设计理念</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：<a href="https://openjdk.org/projects/jigsaw">https://openjdk.org/projects/jigsaw</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Automatic-Module-Name 是一个 jar 包清单文件的条目，它允许开发人员为不包含 <code>module-info.java</code> 的 jar 包定义模块名称。如果 jar 包中没有 Automatic-Module-Name条目，JDK 9 会自动使用 jar 文件的文件名（不含扩展名）作为模块名称。例如：可以在spring-core-6.0.8.jar中的META-INF目录的MANIFEST.MF文件中找到<code>Automatic-Module-Name: spring.core</code>。<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>JSR是Java Specification Requests的缩写，意思是Java规范提案，是指向JCP（Java Community Process）提出新增一个标准化技术规范的正式请求。340是指这个提案的编号。<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>在Spring框架中，JTA（Java Transaction API）和JCA（Java Connector Architecture）是用于事务协调和连接企业信息系统（EIS）的两个重要技术。Spring支持使用JTA管理分布式事务，通过JTA事务管理器，Spring可以在多个资源之间执行分布式事务，并确保事务的ACID（原子性、一致性、隔离性、持久性）属性得到维护。Spring还提供了多个JTA实现，例如Atomikos、Bitronix和JBoss Transaction。另一方面，Spring也支持使用JCA连接到EIS。 Spring为各种EIS提供了适配器，使得使用Spring的应用程序可以通过标准化的接口与EIS集成，例如JDBC和JMS适配器。使用Spring的JCA适配器，可以在Spring应用程序中使用像JDBC和JMS这样的标准API连接到EIS。<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring</tag>
+      
+      <tag>Spring Framework</tag>
+      
+      <tag>入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>1、README</title>
+    <link href="/b5385ca/"/>
+    <url>/b5385ca/</url>
+    
+    <content type="html"><![CDATA[<p>本分类（<a href="https://1515biubiubiu.github.io/categories/Java/">Java</a> &gt; <a href="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/">Spring Framework</a> &gt; <a href="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/">入门</a>）的内容是以<a href="https://spring.io/">Spring官网</a>的<a href="https://docs.spring.io/spring-framework/docs/6.0.8/reference/html/">Spring Framework的参考文档-6.0.8</a>为基础（使用6.0.8版本的原因是：本文开始更新时Spring Framework的当前GA版本为6.0.8）。主要内容为对其的翻译和学习，以及一些本人学习过程中的理解。</p><p>本分类文章的目的旨在对Spring有更全面的认识，并且提升一点点的英文水平。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring</tag>
+      
+      <tag>Spring Framework</tag>
+      
+      <tag>入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
