@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7k 字
+          7.3k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          59 分钟
+          61 分钟
         
       </span>
     
@@ -342,7 +342,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>设置国内镜像仓库<code>/etc/docker/daemon.json</code></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;registry-mirrors&quot;</span> <span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;https://docker.m.daocloud.io&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://dockerproxy.com&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.nju.edu.cn&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;registry-mirrors&quot;</span> <span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;https://docker.m.daocloud.io&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://dockerproxy.com&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.nju.edu.cn&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>配置docker命令行自动补全功能</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. 安装 bash-completion：yum install -y bash-completion<br>2. 在/etc/bashrc中添加<br>if [ -f /usr/share/bash-completion/bash_completion ]; then<br>    . /usr/share/bash-completion/bash_completion<br>fi<br>3. 在~/.bashrc中添加<br>source /usr/share/bash-completion/bash_completion<br>4. source ~/.bashrc<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="2-1-4-mysql-8-0-27"><a href="#2-1-4-mysql-8-0-27" class="headerlink" title="2.1.4 mysql-8.0.27"></a>2.1.4 mysql-8.0.27</h4><p>帐号: root@1515biubiubiu，nacos@2eJUfHrn93f8mrSCzpHy</p>
 <ol>
