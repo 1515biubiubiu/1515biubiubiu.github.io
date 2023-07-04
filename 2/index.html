@@ -376,7 +376,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">Redis服务器监听所有可用的网络接口，忽略所有 IPv6 地址</span><br>bind * -::*  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">redis以守护进程方式运行</span><br>daemonize yes<br><span class="hljs-meta prompt_"># </span><span class="language-bash">redis密码</span><br>requirepass 1515biubiubiu<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>创建docker容器命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name redis --privileged=true --restart=always --net=host -v /usr/local/docker/redis/conf:/etc/redis -v /usr/local/docker/redis/logs:/var/log/redis -v /usr/local/docker/redis/data:/data -d redis<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name redis --privileged=true --restart=always --net=host -v /usr/local/docker/redis/conf:/etc/redis -v /usr/local/docker/redis/logs:/var/log/redis -v /usr/local/docker/redis/data:/data -d redis /etc/redis/redis.conf<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="2-1-6-nacos-2-2-3"><a href="#2-1-6-nacos-2-2-3" class="headerlink" title="2.1.6 nacos-2.2.3"></a>2.1.6 nacos-2.2.3</h4><p>账号：1515biubiubiu@1515biubiubiu</p>
 <ol>
