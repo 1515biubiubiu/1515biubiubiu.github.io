@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.8k 字
+          7.9k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          65 分钟
+          66 分钟
         
       </span>
     
@@ -348,7 +348,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. 安装 bash-completion：yum install -y bash-completion<br>2. 在/etc/bashrc中添加<br>if [ -f /usr/share/bash-completion/bash_completion ]; then<br>    . /usr/share/bash-completion/bash_completion<br>fi<br>3. 在~/.bashrc中添加<br>source /usr/share/bash-completion/bash_completion<br>4. source ~/.bashrc<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>删除Docker image Tag为none镜像（每天0点执行）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. crontab -e<br>2. 写入并保存：0 0 * * * docker images | grep &#x27;&lt;none&gt;&#x27; | awk &#x27;&#123;print $3&#125;&#x27; | xargs -r docker rmi<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. crontab -e<br>2. 写入并保存：0 0 * * * docker images | grep &#x27;&lt;none&gt;&#x27; | awk &#x27;&#123;print $3&#125;&#x27; | xargs -r docker rmi<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装docker compose</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo yum update<br>sudo yum install docker-compose-plugin<br>docker compose version<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="2-1-4-mysql-8-0-27"><a href="#2-1-4-mysql-8-0-27" class="headerlink" title="2.1.4 mysql-8.0.27"></a>2.1.4 mysql-8.0.27</h4><p>帐号: root@1515biubiubiu，nacos@2eJUfHrn93f8mrSCzpHy</p>
 <ol>
