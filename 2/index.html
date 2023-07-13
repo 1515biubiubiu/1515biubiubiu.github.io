@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="dsy&#39;s blog">
 <meta property="og:description" content="1. Parallels2. VMware2.1 devlinux: root@root 2.1.1 jdk-17.0.2 安装方式：压缩包解压安装  安装目录：&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2  环境变量&#x2F;etc&#x2F;profile  123export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2export PATH&#x3D;$PATH:$JAVA_HOM">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-27T16:17:20.556Z">
+<meta property="article:published_time" content="2023-07-12T11:23:18.380Z">
 <meta property="article:modified_time" content="2023-05-06T19:19:54.000Z">
 <meta property="article:author" content="dsy">
 <meta property="article:tag" content="Java,Spring,Spring Boot,Spring Cloud,MySQL,Redis,RabbitMQ,RocketMQ,源码阅读">
@@ -242,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.9k 字
+          7.8k 字
         
       </span>
     
@@ -253,7 +253,7 @@
         
         
         
-          66 分钟
+          65 分钟
         
       </span>
     
@@ -348,10 +348,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. 安装 bash-completion：yum install -y bash-completion<br>2. 在/etc/bashrc中添加<br>if [ -f /usr/share/bash-completion/bash_completion ]; then<br>    . /usr/share/bash-completion/bash_completion<br>fi<br>3. 在~/.bashrc中添加<br>source /usr/share/bash-completion/bash_completion<br>4. source ~/.bashrc<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>删除Docker image Tag为none镜像（每天0点执行）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. crontab -e<br>2. 写入并保存：0 0 * * * docker images | grep &#x27;&lt;none&gt;&#x27; | awk &#x27;&#123;print $3&#125;&#x27; | xargs -r docker rmi<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>安装docker compose</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo yum update<br>sudo yum install docker-compose-plugin<br>docker compose version<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. crontab -e<br>2. 写入并保存：0 0 * * * docker images | grep &#x27;&lt;none&gt;&#x27; | awk &#x27;&#123;print $3&#125;&#x27; | xargs -r docker rmi<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="2-1-4-mysql-8-0-27"><a href="#2-1-4-mysql-8-0-27" class="headerlink" title="2.1.4 mysql-8.0.27"></a>2.1.4 mysql-8.0.27</h4><p>帐号: root@1515biubiubiu，nacos@2eJUfHrn93f8mrSCzpHy</p>
 <ol>
@@ -478,7 +475,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023-05-28 00:17:20</div>
+          <div>2023-07-12 19:23:18</div>
         </div>
       
       
