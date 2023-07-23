@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>dsy&#39;s blog</title>
+  <icon>https://1515biubiubiu.github.io/icon.png</icon>
+  <subtitle>Life Oriented Programming</subtitle>
+  <link href="https://1515biubiubiu.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://1515biubiubiu.github.io/"/>
+  <updated>2023-07-23T14:23:19.000Z</updated>
+  <id>https://1515biubiubiu.github.io/</id>
+  
+  <author>
+    <name>dsy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3、核心技术</title>
+    <link href="https://1515biubiubiu.github.io/8f8103b7/"/>
+    <id>https://1515biubiubiu.github.io/8f8103b7/</id>
+    <published>2023-07-23T14:23:19.326Z</published>
+    <updated>2023-07-23T14:23:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Core</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4、The IoC Container</title>
+    <link href="https://1515biubiubiu.github.io/b346a7e3/"/>
+    <id>https://1515biubiubiu.github.io/b346a7e3/</id>
+    <published>2023-07-23T14:23:19.326Z</published>
+    <updated>2023-07-23T14:23:19.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日志打印规范</title>
+    <link href="https://1515biubiubiu.github.io/966c1abf/"/>
+    <id>https://1515biubiubiu.github.io/966c1abf/</id>
+    <published>2023-07-13T14:19:31.983Z</published>
+    <updated>2023-07-23T09:34:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-什么是日志&quot;&gt;1. 什么是日志&lt;/h2&gt;
+&lt;p&gt;在后端开发中，日志（log）是指记录应用程序运行时状态、事件和相关信息的记录条目。它是开发人员用来了解应用程序在运行过程中发生的事情的重要工具。&lt;/p&gt;
+&lt;h2 id=&quot;2-日志的作用&quot;&gt;2.</summary>
+        
+      
+    
+    
+    
+    <category term="代码结构与规范" scheme="https://1515biubiubiu.github.io/categories/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E4%B8%8E%E8%A7%84%E8%8C%83/"/>
+    
+    
+    <category term="代码结构与规范" scheme="https://1515biubiubiu.github.io/tags/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E4%B8%8E%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2、概述</title>
+    <link href="https://1515biubiubiu.github.io/785d8438/"/>
+    <id>https://1515biubiubiu.github.io/785d8438/</id>
+    <published>2023-05-27T16:17:20.556Z</published>
+    <updated>2023-07-23T14:00:10.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1、README</title>
+    <link href="https://1515biubiubiu.github.io/b5385ca/"/>
+    <id>https://1515biubiubiu.github.io/b5385ca/</id>
+    <published>2023-05-27T16:17:20.555Z</published>
+    <updated>2023-05-03T14:04:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本分类（&lt;a href=&quot;https://1515biubiubiu.github.io/categories/Java/&quot;&gt;Java&lt;/a&gt; &amp;gt; &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+</feed>

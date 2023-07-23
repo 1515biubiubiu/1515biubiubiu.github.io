@@ -1,0 +1,938 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="dsy">
+  <meta name="keywords" content="Spring">
+  
+    <meta name="description" content="Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java 17+。 Spring支持广泛的应用场景。在大型企业中，应用程序往往存在很长时间，并且必须运行在JDK和应用服务器上，其升级周期">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2、概述">
+<meta property="og:url" content="https://1515biubiubiu.github.io/785d8438/index.html">
+<meta property="og:site_name" content="dsy&#39;s blog">
+<meta property="og:description" content="Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java 17+。 Spring支持广泛的应用场景。在大型企业中，应用程序往往存在很长时间，并且必须运行在JDK和应用服务器上，其升级周期">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-27T16:17:20.556Z">
+<meta property="article:modified_time" content="2023-07-23T14:00:10.000Z">
+<meta property="article:author" content="dsy">
+<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="Spring Framework">
+<meta property="article:tag" content="入门">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>2、概述 - dsy&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"1515biubiubiu.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":5},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"693072ecd903af454e3c94e612ce0289","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?693072ecd903af454e3c94e612ce0289";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="dsy's blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>dsy&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="2、概述"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          34 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2、概述</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java 17+。</p>
+<p>Spring支持广泛的应用场景。在大型企业中，应用程序往往存在很长时间，并且必须运行在JDK和应用服务器上，其升级周期不受开发人员的控制。其他人可能作为嵌入服务器的单个jar运行，可能在云环境中，还有一些可能是不需要服务器的独立应用程序（例如批处理和集成工作负载）。</p>
+<p>Spring是开源的。它有一个庞大而活跃的社区，可以根据各种实际用例提供持续的反馈。这帮助Spring在很长一段时间内成功发展。</p>
+<h2 id="1-我们所说的“Spring”是什么意思">1. 我们所说的“Spring”是什么意思</h2>
+<p>“Spring”一词在不同的上下文中意味着不同的事物。它可以用来指代Spring Framework项目本身，这就是一切的开始。随着时间的推移，其他Spring项目已经建立在Spring Framework之上。大多数情况下，当人们说“Spring”时，他们指的是整个项目系列。本参考文档侧重于基础：Spring Framework本身。</p>
+<p>Spring Framework是分成模块的。应用程序可以选择它们需要的模块。核心是核心容器的模块，包括配置模型和依赖注入机制。除此之外，Spring Framework还为不同的应用程序架构提供了基础支持，包括消息传递，数据的事务和持久性，以及web。它还包括基于Servlet的Spring MVC Web框架，以及并行的Spring WebFlux反应式Web框架。</p>
+<p>一个关于模块的说明：Spring的框架jar包们允许部署到JDK9的模块路径（“Jigsaw”<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：https://openjdk.org/projects/jigsaw">[1]</span></a></sup>）。为了在支持Jigsaw的应用程序中使用，Spring Framework 5 jar带有“Automatic-Module-Name”<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Automatic-Module-Name 是一个 jar 包清单文件的条目，它允许开发人员为不包含 `module-info.java` 的 jar 包定义模块名称。如果 jar 包中没有 Automatic-Module-Name条目，JDK 9 会自动使用 jar 文件的文件名（不含扩展名）作为模块名称。例如：可以在spring-core-6.0.8.jar中的META-INF目录的MANIFEST.MF文件中找到`Automatic-Module-Name: spring.core`。">[2]</span></a></sup>清单条目，这些条目定义了独立于jar工件的稳定语言级模块名称（“Spring.core“、”Spring.context“等）（jar遵循相同的命名模式，使用“-”而不是“.”，例如“Spring-core”和“Spring-context”）。当然，Spring的框架jar可以用在JDK8和9+的类路径上正常工作。</p>
+<h2 id="2-Spring和Spring-Framework的历史">2. Spring和Spring Framework的历史</h2>
+<p>Spring作为应对早期J2EE的复杂性的产品于2003年应运而生。虽然有些人认为Java EE和它的现代的继任者Jakarta EE与Spring存在竞争关系，它们实际上是互补的。Spring编程模型不包含Jakarta EE平台规范；Spring从传统EE规范所涵盖的所有相关规范、标准和技术中精选的个别规范：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>Servlet API (<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=340">JSR 340</a><sup id="fnref:3" class="footnote-ref"><a href="#fn:3" rel="footnote"><span class="hint--top hint--rounded" aria-label="JSR是Java Specification Requests的缩写，意思是Java规范提案，是指向JCP（Java Community Process）提出新增一个标准化技术规范的正式请求。340是指这个提案的编号。">[3]</span></a></sup>)</p>
+</li>
+<li class="lvl-2">
+<p>WebSocket API (<a target="_blank" rel="noopener" href="https://www.jcp.org/en/jsr/detail?id=356">JSR 356</a>)</p>
+</li>
+<li class="lvl-2">
+<p>Concurrency Utilities (<a target="_blank" rel="noopener" href="https://www.jcp.org/en/jsr/detail?id=236">JSR 236</a>)</p>
+</li>
+<li class="lvl-2">
+<p>JSON Binding API (<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=367">JSR 367</a>)</p>
+</li>
+<li class="lvl-2">
+<p>Bean Validation (<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=303">JSR 303</a>)</p>
+</li>
+<li class="lvl-2">
+<p>JPA (<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=338">JSR 338</a>)</p>
+</li>
+<li class="lvl-2">
+<p>JMS (<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=914">JSR 914</a>)</p>
+</li>
+<li class="lvl-2">
+<p>如果需要的话，还可以使用JTA/JCA<sup id="fnref:4" class="footnote-ref"><a href="#fn:4" rel="footnote"><span class="hint--top hint--rounded" aria-label="在Spring框架中，JTA（Java Transaction API）和JCA（Java Connector Architecture）是用于事务协调和连接企业信息系统（EIS）的两个重要技术。Spring支持使用JTA管理分布式事务，通过JTA事务管理器，Spring可以在多个资源之间执行分布式事务，并确保事务的ACID（原子性、一致性、隔离性、持久性）属性得到维护。Spring还提供了多个JTA实现，例如Atomikos、Bitronix和JBoss Transaction。另一方面，Spring也支持使用JCA连接到EIS。 Spring为各种EIS提供了适配器，使得使用Spring的应用程序可以通过标准化的接口与EIS集成，例如JDBC和JMS适配器。使用Spring的JCA适配器，可以在Spring应用程序中使用像JDBC和JMS这样的标准API连接到EIS。">[4]</span></a></sup>设置来进行事务协调。</p>
+</li>
+</ul>
+<p>Spring还支持依赖注入（<a target="_blank" rel="noopener" href="https://www.jcp.org/en/jsr/detail?id=330">JSR 330</a>）和通用注解（<a target="_blank" rel="noopener" href="https://jcp.org/en/jsr/detail?id=250">JSR 250</a>）规范。应用程序开发人员可以选择使用它们来代替Spring框架提供的特定于Spring的机制。最初，那些（那些指JSR 330和JSR 250）是基于通用<code>javax</code>包的。</p>
+<p>从Spring Framework 6.0起，Spring已经升级到Jakarta EE 9（例如：Servlet 5.0+，JPA 3.0+），基于<code>Jakarta</code>命名空间代替传统的<code>javax</code>包。以EE 9作为最低要求并且已经支持EE 10。Spring已经做好为进一步演化的Jakarta EE API提供开箱即用的支持的准备。Spring Framework 6.0完全兼容Tomcat 10.1，Jetty 11和Undertow 2.3作为web服务器。也与Hibernate ORM 6.1兼容。</p>
+<p>随着时间的推移，Java/Jakarta EE在应用程序开发中的角色发生了变化。在J2EE和Spring早期，应用程序是为了部署到一个应用服务器而创建的。如今，在Spring Boot的帮助下，应用程序以DevOps和云友好的方式创建，Servlet容器被嵌入其中，而且轻松易改。从Spring Framework 5开始，一个WebFlux应用程序甚至不直接使用Servlet API并且可以运行在不是Servlet容器的服务器上（如Netty）。</p>
+<p>Spring继续创新和演进。除了Spring Framework外，还有其他项目，例如Spring Boot，Spring Security，Spring Data，Spring Cloud，Spring Batch等。重要的是记住每个项目都有自己的源码仓库，问题追踪器，发布节奏。请访问<a href="spring.io/projects">spring.io/projects</a>查看完整的Spring项目列表。</p>
+<h2 id="3-设计理念">3. 设计理念</h2>
+<p>当您了解一个框架时，重要的是不仅要了解它的用途，还要了解它遵循的原则。以下是Spring框架的指导原则：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>在每个层次上提供选择。Spring允许您尽可能地延迟设计决策。例如，您可以通过配置切换持久性提供程序，而无需更改代码。对于许多其他基础结构问题和与第三方APIs的集成，也是如此。</p>
+</li>
+<li class="lvl-2">
+<p>容纳不同的观点。Spring拥抱灵活性，并且对于食物应该如何完成并不固执己见。它支持多种不同角度的应用需求。</p>
+</li>
+<li class="lvl-2">
+<p>保持强大的向后兼容性。Spring的演变经过精心管理，在版本之间几乎没有发生重大变化。Spring支持一系列精心挑选的JDK版本和第三方库，以便维护依赖于Spring的应用程序和库。</p>
+</li>
+<li class="lvl-2">
+<p>关心API设计。Spring团队投入了大量的思考和时间来制作直观且可以跨多个版本和多年的API。</p>
+</li>
+<li class="lvl-2">
+<p>为代码质量设定高标准。Spring框架非常强调有意义、最新且最准确的javadoc。它是极少数可以声称干净的代码结构且包之间没有循环依赖关系的项目之一。</p>
+</li>
+</ul>
+<h2 id="4-反馈和贡献">4. 反馈和贡献</h2>
+<p>对于操作方法问题或诊断或调试问题，我们建议使用Stack Overflow。单击<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop+or+spring-jdbc+or+spring-r2dbc+or+spring-transactions+or+spring-annotations+or+spring-jms+or+spring-el+or+spring-test+or+spring+or+spring-orm+or+spring-jmx+or+spring-cache+or+spring-webflux+or+spring-rsocket?tab=Newest">此处</a>获取要在Stack Overflow上使用的建议标签列表。如果您相当确定Spring框架中存在问题或想要建议某个功能，请使用<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework/issues">GitHub Issues</a>。</p>
+<p>如果您有解决方案或建议的修复方案，您可以在<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework">Github</a>上提交拉取请求（Request Pull）。但是，请记住，除了最简单的问题外，我们希望您首先在问题跟踪器中提交一个工单（Ticket），在那里进行讨论并留下记录供将来参考。</p>
+<p>更多细节请参阅项目的顶层页面上的<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>。</p>
+<h2 id="5-入门">5. 入门</h2>
+<p>如果您刚开始学习Spring，您可能希望通过创建一个基于<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-boot">Spring Boot</a>的应用程序来开始使用Spring框架。Spring Boot提供了一种快速（并且偏向特定观点：指在某些方面做出了一些预设和默认值）的方式来创建一个生产就绪的基于Spring的应用程序。它基于Spring Framework，倾向于约定优于配置，并旨在让您尽快上手。</p>
+<p>您可以使用<a target="_blank" rel="noopener" href="https://start.spring.io/">start.spring.io</a>来生成一个基本的项目，或者按照<a target="_blank" rel="noopener" href="https://spring.io/guides">&quot;Getting Started&quot;指南</a>之一来操作，比如<a target="_blank" rel="noopener" href="https://spring.io/guides/gs/rest-service/">&quot;Getting Started Building a RESTful Web Service&quot;</a>。除了更易于理解，这些指南还着重于具体任务，并且大部分都是基于Spring Boot的。它们还涵盖了Spring系列中的其他项目，当您解决特定问题时可能会考虑到这些项目。</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：<a target="_blank" rel="noopener" href="https://openjdk.org/projects/jigsaw">https://openjdk.org/projects/jigsaw</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Automatic-Module-Name 是一个 jar 包清单文件的条目，它允许开发人员为不包含 <code>module-info.java</code> 的 jar 包定义模块名称。如果 jar 包中没有 Automatic-Module-Name条目，JDK 9 会自动使用 jar 文件的文件名（不含扩展名）作为模块名称。例如：可以在spring-core-6.0.8.jar中的META-INF目录的MANIFEST.MF文件中找到<code>Automatic-Module-Name: spring.core</code>。
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span>JSR是Java Specification Requests的缩写，意思是Java规范提案，是指向JCP（Java Community Process）提出新增一个标准化技术规范的正式请求。340是指这个提案的编号。
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span>在Spring框架中，JTA（Java Transaction API）和JCA（Java Connector Architecture）是用于事务协调和连接企业信息系统（EIS）的两个重要技术。Spring支持使用JTA管理分布式事务，通过JTA事务管理器，Spring可以在多个资源之间执行分布式事务，并确保事务的ACID（原子性、一致性、隔离性、持久性）属性得到维护。Spring还提供了多个JTA实现，例如Atomikos、Bitronix和JBoss Transaction。另一方面，Spring也支持使用JCA连接到EIS。 Spring为各种EIS提供了适配器，使得使用Spring的应用程序可以通过标准化的接口与EIS集成，例如JDBC和JMS适配器。使用Spring的JCA适配器，可以在Spring应用程序中使用像JDBC和JMS这样的标准API连接到EIS。
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/" class="category-chain-item">Spring Framework</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/" class="category-chain-item">入门</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Spring/">#Spring</a>
+      
+        <a href="/tags/Spring-Framework/">#Spring Framework</a>
+      
+        <a href="/tags/%E5%85%A5%E9%97%A8/">#入门</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>2、概述</div>
+      <div>https://1515biubiubiu.github.io/785d8438/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>dsy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023-05-28 00:17:20</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023-07-23 22:00:10</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"d7b165979b546b8f57f2","clientSecret":"64c0e629805975bea23be0345ed50e842d57da94","repo":"1515biubiubiu.github.io","owner":"1515biubiubiu","admin":["1515biubiubiu"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","id":null},
+          {
+            id: '7903c557374f872b117f0d42aa9a2484'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
+        id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
+        aria-expanded="true"
+      >
+        Java
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
+           role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Spring Framework"
+        id="heading-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3" role="tab" data-toggle="collapse" href="#collapse-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3"
+        aria-expanded="true"
+      >
+        Spring Framework
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3"
+           role="tabpanel" aria-labelledby="heading-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="入门"
+        id="heading-1fa42afe88e8205372202517cf1dd43b" role="tab" data-toggle="collapse" href="#collapse-1fa42afe88e8205372202517cf1dd43b"
+        aria-expanded="true"
+      >
+        入门
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-1fa42afe88e8205372202517cf1dd43b"
+           role="tabpanel" aria-labelledby="heading-1fa42afe88e8205372202517cf1dd43b">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/b5385ca/" title="1、README"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">1、README</span>
+        </a>
+      
+    
+      
+      
+        <a href="/785d8438/" title="2、概述"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">2、概述</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="核心技术"
+        id="heading-b80823f4da3dac63e70a3660bb4e35b6" role="tab" data-toggle="collapse" href="#collapse-b80823f4da3dac63e70a3660bb4e35b6"
+        aria-expanded="false"
+      >
+        核心技术
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-b80823f4da3dac63e70a3660bb4e35b6"
+           role="tabpanel" aria-labelledby="heading-b80823f4da3dac63e70a3660bb4e35b6">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/8f8103b7/" title="3、核心技术"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">3、核心技术</span>
+        </a>
+      
+    
+      
+      
+        <a href="/b346a7e3/" title="4、The IoC Container"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">4、The IoC Container</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

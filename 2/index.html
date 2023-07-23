@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="dsy">
+  <meta name="keywords" content="Java,Spring,Spring Boot,Spring Cloud,MySQL,Redis,RabbitMQ,RocketMQ,源码阅读">
+  
+    <meta name="description" content="1. Parallels 2. VMware 2.1 dev linux: root@root 2.1.1 jdk-17.0.2   安装方式：压缩包解压安装   安装目录：&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2   环境变量&#x2F;etc&#x2F;profile  123export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2export PATH&#x3D;$PATH:$J">
+<meta property="og:type" content="article">
+<meta property="og:title" content="deploy">
+<meta property="og:url" content="https://1515biubiubiu.github.io/2/index.html">
+<meta property="og:site_name" content="dsy&#39;s blog">
+<meta property="og:description" content="1. Parallels 2. VMware 2.1 dev linux: root@root 2.1.1 jdk-17.0.2   安装方式：压缩包解压安装   安装目录：&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2   环境变量&#x2F;etc&#x2F;profile  123export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;java&#x2F;jdk-17.0.2export PATH&#x3D;$PATH:$J">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-12T11:23:18.380Z">
+<meta property="article:modified_time" content="2023-05-06T19:19:54.000Z">
+<meta property="article:author" content="dsy">
+<meta property="article:tag" content="Java,Spring,Spring Boot,Spring Cloud,MySQL,Redis,RabbitMQ,RocketMQ,源码阅读">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>deploy - dsy&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"1515biubiubiu.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":5},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"693072ecd903af454e3c94e612ce0289","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?693072ecd903af454e3c94e612ce0289";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="dsy's blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>dsy&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="deploy"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          65 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">deploy</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="1-Parallels">1. Parallels</h2>
+<h2 id="2-VMware">2. VMware</h2>
+<h3 id="2-1-dev">2.1 dev</h3>
+<p>linux: root@root</p>
+<h4 id="2-1-1-jdk-17-0-2">2.1.1 jdk-17.0.2</h4>
+<ol>
+<li class="lvl-3">
+<p>安装方式：压缩包解压安装</p>
+</li>
+<li class="lvl-3">
+<p>安装目录：<code>/usr/local/java/jdk-17.0.2</code></p>
+</li>
+<li class="lvl-3">
+<p>环境变量<code>/etc/profile</code></p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">export JAVA_HOME=/usr/local/java/jdk-17.0.2<br>export PATH=$PATH:$JAVA_HOME/bin;<br>export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar;<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-2-frp-0-41-0">2.1.2 frp-0.41.0</h4>
+<ol>
+<li class="lvl-3">
+<p>安装方式： 压缩包解压安装</p>
+</li>
+<li class="lvl-3">
+<p>安装目录：<code>/usr/local/frp-0.41.0</code></p>
+</li>
+<li class="lvl-3">
+<p>配置文件<code>/usr/local/frp-0.41.0/frpc.ini</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs shell">[common]<br>server_addr = 0.0.0.0<br>server_port = 2000<br>log_file = /usr/local/frp-0.41.0/log/frpc.log<br>log_level = info<br>log_max_days = 7<br>token = 123456<br><br>[vm-ssh]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 22<br>remote_port = 3002<br><br>[vm-mysql]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 3306<br>remote_port = 3306<br><br>[vm-redis]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 6379<br>remote_port = 6379<br><br>[vm-nacos1]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 8848<br>remote_port = 8848<br><br>[vm-nacos2]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 9848<br>remote_port = 9848<br><br>[vm-rabbitmq-client]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 15672<br>remote_port = 15672<br><br>[vm-rabbitmq-server]<br>type = tcp<br>local_ip = 127.0.0.1<br>local_port = 5672<br>remote_port = 5672  <br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>开机自启动<code>/etc/systemd/system/frpc.service</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs shell">[Unit]<br>Description=Frp Client Service<br>After=network.target<br><br>[Service]<br>Type=simple<br>User=root<br>Restart=on-failure<br>RestartSec=5s<br>ExecStart=/usr/local/frp-0.41.0/frpc -c /usr/local/frp-0.41.0/frpc.ini<br>ExecReload=/usr/local/frp-0.41.0/frpc reload -c /usr/local/frp-0.41.0/frpc.ini<br>LimitNOFILE=1048576<br><br>[Install]<br>WantedBy=multi-user.target<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-3-docker-24-0-2">2.1.3 docker-24.0.2</h4>
+<ol>
+<li class="lvl-3">
+<p>卸载旧版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum remove docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras &amp;&amp; rm -rf /var/lib/docker &amp;&amp; rm -rf /var/lib/containerd<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>安装方式： yum安装</p>
+</li>
+<li class="lvl-3">
+<p>设置存储库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install -y yum-utils &amp;&amp; yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>安装命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>设置国内镜像仓库<code>/etc/docker/daemon.json</code></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br><span class="hljs-attr">&quot;registry-mirrors&quot;</span> <span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-string">&quot;https://docker.m.daocloud.io&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://dockerproxy.com&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-string">&quot;https://docker.nju.edu.cn&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>配置docker命令行自动补全功能</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. 安装 bash-completion：yum install -y bash-completion<br>2. 在/etc/bashrc中添加<br>if [ -f /usr/share/bash-completion/bash_completion ]; then<br>    . /usr/share/bash-completion/bash_completion<br>fi<br>3. 在~/.bashrc中添加<br>source /usr/share/bash-completion/bash_completion<br>4. source ~/.bashrc<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>删除Docker image Tag为none镜像（每天0点执行）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">1. crontab -e<br>2. 写入并保存：0 0 * * * docker images | grep &#x27;&lt;none&gt;&#x27; | awk &#x27;&#123;print $3&#125;&#x27; | xargs -r docker rmi<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-4-mysql-8-0-27">2.1.4 mysql-8.0.27</h4>
+<p>帐号: root@1515biubiubiu，nacos@2eJUfHrn93f8mrSCzpHy</p>
+<ol>
+<li class="lvl-3">
+<p>安装方式：docker安装</p>
+</li>
+<li class="lvl-3">
+<p>创建挂载目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir -p /usr/local/docker/mysql/conf &amp;&amp; mkdir -p /usr/local/docker/mysql/data &amp;&amp; mkdir -p /usr/local/docker/mysql/logs<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>创建mysql配置文件<code>/usr/local/docker/mysql/conf/my.cnf</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs shell">[mysqld]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">允许访问的IP网段</span><br>bind-address=0.0.0.0<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">服务端口号 默认3306</span><br>port=3306<br>user=mysql<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">mysql数据文件所在位置</span><br>datadir=/var/lib/mysql<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">pid</span><br>pid-file=/var/run/mysqld/mysqld.pid<br>socket=/var/run/mysqld/mysqld.sock<br>default-time-zone = &#x27;+8:00&#x27;<br><br>sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">只能用IP地址检查客户端的登录，不用主机名</span><br>skip_name_resolve=1<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">事务隔离级别，默认为可重复读，mysql默认可重复读级别（此级别下可能参数很多间隙锁，影响性能）</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">transaction_isolation=READ-COMMITTED</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">最大连接数</span><br>max_connections=400<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">最大错误连接数</span><br>max_connect_errors=1000<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">TIMESTAMP如果没有显示声明NOT NULL，允许NULL值</span><br>explicit_defaults_for_timestamp=true<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash">SQL数据包发送的大小，如果有BLOB对象建议修改成1G</span><br>max_allowed_packet=1G<br><br>[mysql]<br>default-character-set = utf8mb4<br><br>[client]<br>port=3306<br>default-character-set = utf8mb4<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>创建docker容器命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name mysql --privileged=true --restart=always --net=host -v /usr/local/docker/mysql/conf:/etc/mysql/conf.d -v /usr/local/docker/mysql/logs:/var/log/mysql -v /usr/local/docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1515biubiubiu -d mysql<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-5-redis-7-0-11">2.1.5 redis-7.0.11</h4>
+<p>帐号: *@1515biubiubiu</p>
+<ol>
+<li class="lvl-3">
+<p>安装方式：docker安装</p>
+</li>
+<li class="lvl-3">
+<p>创建挂载目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir -p /usr/local/docker/redis/conf &amp;&amp; mkdir -p /usr/local/docker/redis/data &amp;&amp; mkdir -p /usr/local/docker/redis/logs<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>下载redis配置文件，<a target="_blank" rel="noopener" href="https://redis.io/docs/management/config/">下载地址</a>。</p>
+</li>
+<li class="lvl-3">
+<p>复制内容到<code>/usr/local/docker/redis/conf/redis.conf</code>中，并修改如下选项。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">Redis服务器监听所有可用的网络接口，忽略所有 IPv6 地址</span><br>bind * -::*  <br><span class="hljs-meta prompt_"># </span><span class="language-bash">redis以守护进程方式运行</span><br>daemonize yes<br><span class="hljs-meta prompt_"># </span><span class="language-bash">redis密码</span><br>requirepass 1515biubiubiu<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>创建docker容器命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">docker的-d命令和redis的daemonize=<span class="hljs-built_in">yes</span>冲突只能有一个</span><br>docker run --name redis --privileged=true --restart=always --net=host -v /usr/local/docker/redis/conf:/etc/redis -v /usr/local/docker/redis/logs:/var/log/redis -v /usr/local/docker/redis/data:/data -d redis-server /etc/redis/redis.conf<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-6-nacos-2-2-3">2.1.6 nacos-2.2.3</h4>
+<p>账号：1515biubiubiu@1515biubiubiu</p>
+<ol>
+<li class="lvl-3">
+<p>安装方式：docker安装</p>
+</li>
+<li class="lvl-3">
+<p>创建挂载目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir -p /usr/local/docker/nacos/conf &amp;&amp; mkdir -p /usr/local/docker/nacos/data &amp;&amp; mkdir -p /usr/local/docker/nacos/logs<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p><a target="_blank" rel="noopener" href="https://github.com/alibaba/nacos/releases">下载nacos</a>，在压缩包中application.properties配置文件，配置对应数据库。复制到<code>/usr/local/docker/nacos/conf/application.properties</code>中。</p>
+</li>
+<li class="lvl-3">
+<p>创建docker容器命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name nacos --privileged=true --restart=always --net=host -v /usr/local/docker/nacos/conf/application.properties:/home/nacos/conf/application.properties -v /usr/local/docker/nacos/logs:/home/nacos/logs -v /usr/local/docker/nacos/data:/home/nacos/data -e MODE=standalone -d nacos/nacos-server<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="2-1-7-rabbitmq-3-12-0">2.1.7 rabbitmq-3.12.0</h4>
+<p>帐号：1515biubiubiu@1515biubiubiu</p>
+<ol>
+<li class="lvl-3">
+<p>安装方式：docker安装</p>
+</li>
+<li class="lvl-3">
+<p>创建挂载目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir -p /usr/local/docker/rabbitmq/data &amp;&amp; mkdir -p /usr/local/docker/rabbitmq/logs<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>创建docker容器命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name rabbitmq --privileged=true --restart=always --net=host -v /usr/local/docker/rabbitmq/data:/var/lib/rabbitmq -v /usr/local/docker/rabbitmq/log:/var/log/rabbitmq -d rabbitmq<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p><code>/usr/local/docker/rabbitmq/log</code>目录无权限问题。执行命令<code>chown -R systemd-coredump:root /usr/local/docker/rabbitmq/log</code>，此命令的作用是为了设置此目录与<code>/usr/local/docker/rabbitmq/data</code>目录是相同的所有者和组。</p>
+</li>
+<li class="lvl-3">
+<p>进入容器：<code>docker exec -it rabbitmq /bin/bash</code></p>
+</li>
+<li class="lvl-3">
+<p>开启web管理端：<code>rabbitmq-plugins enable rabbitmq_management</code></p>
+</li>
+<li class="lvl-3">
+<p>添加用户并设置密码：<code>rabbitmqctl add_user 1515biubiubiu 1515biubiubiu</code></p>
+</li>
+<li class="lvl-3">
+<p>添加用户为administrator角色：<code>rabbitmqctl set_user_tags 1515biubiubiu administrator</code></p>
+</li>
+<li class="lvl-3">
+<p>设置用户的权限，指定允许访问的vhost以及write/read：<code>rabbitmqctl set_permissions -p &quot;/&quot; 1515biubiubiu &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;</code></p>
+</li>
+</ol>
+<h4 id="2-1-8-zookeeper-3-8-1">2.1.8 zookeeper-3.8.1</h4>
+<ol>
+<li class="lvl-3">
+<p>安装方式：docker安装</p>
+</li>
+<li class="lvl-3">
+<p>创建挂载目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkdir -p /usr/local/docker/zookeeper/data &amp;&amp; mkdir -p /usr/local/docker/zookeeper/logs<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>创建docker容器命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run --name zookeeper --privileged=true --restart=always --net=host -v /usr/local/docker/zookeeper/data:/data -v /usr/local/docker/zookeeper/log:/datalog -d zookeeper<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="3-阿里云">3. 阿里云</h2>
+<p>linux: root@i-wz97sm51bf4khy95ns3d</p>
+<h3 id="3-1-frp-0-42-0">3.1 frp-0.42.0</h3>
+<ol>
+<li class="lvl-3">
+<p>安装方式: 压缩包解压安装</p>
+</li>
+<li class="lvl-3">
+<p>安装目录: <code>/usr/local/frp-0.42.0</code></p>
+</li>
+<li class="lvl-3">
+<p>配置文件<code>/usr/local/frp-0.42.0/frps.ini</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs shell">[common]<br><span class="hljs-meta prompt_"># </span><span class="language-bash">A literal address or host name <span class="hljs-keyword">for</span> IPv6 must be enclosed</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">in</span> square brackets, as <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;[::1]:80&quot;</span>, <span class="hljs-string">&quot;[ipv6-host]:http&quot;</span> or <span class="hljs-string">&quot;[ipv6-host%zone]:80&quot;</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">For single <span class="hljs-string">&quot;bind_addr&quot;</span> field, no need square brackets, like <span class="hljs-string">&quot;bind_addr = ::&quot;</span>.</span><br>bind_addr = 0.0.0.0<br>bind_port = 2000<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">udp port to <span class="hljs-built_in">help</span> make udp hole to penetrate nat</span><br>bind_udp_port = 2001<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">udp port used <span class="hljs-keyword">for</span> kcp protocol, it can be same with <span class="hljs-string">&#x27;bind_port&#x27;</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">if</span> not <span class="hljs-built_in">set</span>, kcp is disabled <span class="hljs-keyword">in</span> frps</span><br>kcp_bind_port = 2000<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">specify <span class="hljs-built_in">which</span> address proxy will listen <span class="hljs-keyword">for</span>, default value is same with bind_addr</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">proxy_bind_addr = 127.0.0.1</span><br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-keyword">if</span> you want to support virtual host, you must <span class="hljs-built_in">set</span> the http port <span class="hljs-keyword">for</span> listening (optional)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">Note: http port and https port can be same with bind_port</span><br>vhost_http_port = 80<br>vhost_https_port = 443<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-built_in">set</span> dashboard_addr and dashboard_port to view dashboard of frps</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">dashboard_addr<span class="hljs-string">&#x27;s default value is same with bind_addr</span></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">dashboard is available only if dashboard_port is set</span></span><br>dashboard_addr = 0.0.0.0<br>dashboard_port = 2002<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">dashboard user and passwd for basic auth protect</span></span><br>dashboard_user = admin<br>dashboard_pwd = 123456<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">console or real logFile path like ./frps.log</span></span><br>log_file = /usr/local/frp-0.42.0/log/frps.log<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">trace, debug, info, warn, error</span></span><br>log_level = info<br><br>log_max_days = 3<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash"><span class="hljs-string">auth token</span></span><br>token = 123456<br></code></pre></td></tr></table></figure>
+</li>
+<li class="lvl-3">
+<p>开机自启动 <code>/etc/systemd/system/frps.service</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs shell">[Unit]<br>Description=Frp Server Service<br>After=network.target<br><br>[Service]<br>Type=simple<br>User=root<br>Restart=on-failure<br>RestartSec=5s<br>ExecStart=/usr/local/frp-0.42.0/frps -c /usr/local/frp-0.42.0/frps.ini<br>LimitNOFILE=1048576<br><br>[Install]<br>WantedBy=multi-user.target<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>deploy</div>
+      <div>https://1515biubiubiu.github.io/2/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>dsy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023-07-12 19:23:18</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023-05-07 03:19:54</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

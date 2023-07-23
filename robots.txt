@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /-1/
+Disallow: /0/
+Disallow: /1/
+Disallow: /2/
+
+Sitemap: https://1515biubiubiu.github.io/sitemap.xml
+Sitemap: https://1515biubiubiu.github.io/baidusitemap.xml
