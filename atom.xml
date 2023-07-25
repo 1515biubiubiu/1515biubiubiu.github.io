@@ -28,7 +28,9 @@
       
         
         
-    <summary type="html">&lt;h1&gt;Core</summary>
+    <summary type="html">&lt;h1&gt;Core Technologies&lt;/h1&gt;
+&lt;p&gt;这部分参考文档涵盖了对于Spring Framework绝对不可或缺的所有技术。&lt;/p&gt;
+&lt;p&gt;首先，其中最重要的是Spring Framework的控制反转（IoC）容器。在全面介绍Spring</summary>
         
       
     
