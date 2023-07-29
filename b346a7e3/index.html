@@ -14,26 +14,36 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="dsy">
-  <meta name="keywords" content="Java,Spring,Spring Boot,Spring Cloud,MySQL,Redis,RabbitMQ,RocketMQ,源码阅读">
+  <meta name="keywords" content="Spring">
   
-    <meta name="description" content="Java后端开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://1515biubiubiu.github.io/categories/index.html">
+    <meta name="description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概述   Bean概述   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4、The IoC Container">
+<meta property="og:url" content="https://1515biubiubiu.github.io/b346a7e3/index.html">
 <meta property="og:site_name" content="dsy&#39;s blog">
-<meta property="og:description" content="Java后端开发">
+<meta property="og:description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概述   Bean概述   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-29T14:04:21.828Z">
+<meta property="article:modified_time" content="2023-07-29T14:07:53.000Z">
 <meta property="article:author" content="dsy">
-<meta property="article:tag" content="Java,Spring,Spring Boot,Spring Cloud,MySQL,Redis,RabbitMQ,RocketMQ,源码阅读">
+<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="Spring Framework">
+<meta property="article:tag" content="入门">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>分类 - dsy&#39;s blog</title>
+  <title>4、The IoC Container - dsy&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -116,7 +126,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -222,9 +232,42 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="分类"></span>
+            <span id="subtitle" data-typed-text="4、The IoC Container"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          213 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -240,14 +283,253 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">4、The IoC Container</h1>
+            
+            
+              <div class="markdown-body">
                 
+                <h1>The IoC Container</h1>
+<p>本章介绍Spring的控制反转（IoC）容器。</p>
+<h1>Section Summary</h1>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p><a href="/78a192b8">Spring IoC容器和Bean简介</a></p>
+</li>
+<li class="lvl-2">
+<p>容器概述</p>
+</li>
+<li class="lvl-2">
+<p>Bean概述</p>
+</li>
+<li class="lvl-2">
+<p>依赖关系</p>
+</li>
+<li class="lvl-2">
+<p>Bean作用域</p>
+</li>
+<li class="lvl-2">
+<p>自定义Bean的性质</p>
+</li>
+<li class="lvl-2">
+<p>Bean定义继承</p>
+</li>
+<li class="lvl-2">
+<p>容器扩展点</p>
+</li>
+<li class="lvl-2">
+<p>基于注解的容器配置</p>
+</li>
+<li class="lvl-2">
+<p>类路径扫描和托管组件</p>
+</li>
+<li class="lvl-2">
+<p>使用JSR 330标准注解</p>
+</li>
+<li class="lvl-2">
+<p>基于Java的容器配置</p>
+</li>
+<li class="lvl-2">
+<p>环境抽象</p>
+</li>
+<li class="lvl-2">
+<p>注册LoadTimeWeaver</p>
+</li>
+<li class="lvl-2">
+<p>ApplicationContext的附加功能</p>
+</li>
+<li class="lvl-2">
+<p>BeanFactory API</p>
+</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/" class="category-chain-item">Spring Framework</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/" class="category-chain-item">入门</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="category-chain-item">核心技术</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/" class="category-chain-item">IoC容器</a>
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Spring/">#Spring</a>
+      
+        <a href="/tags/Spring-Framework/">#Spring Framework</a>
+      
+        <a href="/tags/%E5%85%A5%E9%97%A8/">#入门</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>4、The IoC Container</div>
+      <div>https://1515biubiubiu.github.io/b346a7e3/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>dsy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023-07-29 22:04:21</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023-07-29 22:07:53</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"d7b165979b546b8f57f2","clientSecret":"64c0e629805975bea23be0345ed50e842d57da94","repo":"1515biubiubiu.github.io","owner":"1515biubiubiu","admin":["1515biubiubiu"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","id":null},
+          {
+            id: 'c51c75cb845901bbac3b97c73fde6595'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
 
 
 
@@ -266,14 +548,9 @@
         aria-expanded="true"
       >
         Java
-        <span class="list-group-count"></span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
-      
-        <a href="/categories/Java/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>5</span>
-        </a>
       
       <div class="category-collapse collapse show" id="collapse-d52387880e1ea22817a72d3759213819"
            role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
@@ -298,14 +575,9 @@
         aria-expanded="true"
       >
         Spring Framework
-        <span class="list-group-count"></span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
-      
-        <a href="/categories/Java/Spring-Framework/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>5</span>
-        </a>
       
       <div class="category-collapse collapse show" id="collapse-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3"
            role="tabpanel" aria-labelledby="heading-5d8ac1cd6ff52d5370a5dc5e4a6d9cf3">
@@ -324,22 +596,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="入门"
         id="heading-1fa42afe88e8205372202517cf1dd43b" role="tab" data-toggle="collapse" href="#collapse-1fa42afe88e8205372202517cf1dd43b"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         入门
-        <span class="list-group-count"></span>
+        <span class="list-group-count">(5)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>5</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-1fa42afe88e8205372202517cf1dd43b"
+      <div class="category-collapse collapse show" id="collapse-1fa42afe88e8205372202517cf1dd43b"
            role="tabpanel" aria-labelledby="heading-1fa42afe88e8205372202517cf1dd43b">
         
         
@@ -374,22 +641,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="核心技术"
         id="heading-b80823f4da3dac63e70a3660bb4e35b6" role="tab" data-toggle="collapse" href="#collapse-b80823f4da3dac63e70a3660bb4e35b6"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         核心技术
-        <span class="list-group-count"></span>
+        <span class="list-group-count">(3)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>3</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-b80823f4da3dac63e70a3660bb4e35b6"
+      <div class="category-collapse collapse show" id="collapse-b80823f4da3dac63e70a3660bb4e35b6"
            role="tabpanel" aria-labelledby="heading-b80823f4da3dac63e70a3660bb4e35b6">
         
         
@@ -415,22 +677,17 @@
     
     
     <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
+      <a class="category-subitem 
           list-group-item category-item-action col-10 col-md-11 col-xm-11" title="IoC容器"
         id="heading-fd5afb3557268cae33528ce30c00088e" role="tab" data-toggle="collapse" href="#collapse-fd5afb3557268cae33528ce30c00088e"
-        aria-expanded="false"
+        aria-expanded="true"
       >
         IoC容器
-        <span class="list-group-count"></span>
+        <span class="list-group-count">(2)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>2</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-fd5afb3557268cae33528ce30c00088e"
+      <div class="category-collapse collapse show" id="collapse-fd5afb3557268cae33528ce30c00088e"
            role="tabpanel" aria-labelledby="heading-fd5afb3557268cae33528ce30c00088e">
         
         
@@ -442,7 +699,7 @@
       
         <a href="/b346a7e3/" title="4、The IoC Container"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">4、The IoC Container</span>
         </a>
       
@@ -478,56 +735,44 @@
       </div>
     </div>
   
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="代码结构与规范"
-        id="heading-611a9a9047833b465a7f596d95131f72" role="tab" data-toggle="collapse" href="#collapse-611a9a9047833b465a7f596d95131f72"
-        aria-expanded="false"
-      >
-        代码结构与规范
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E4%B8%8E%E8%A7%84%E8%8C%83/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-611a9a9047833b465a7f596d95131f72"
-           role="tabpanel" aria-labelledby="heading-611a9a9047833b465a7f596d95131f72">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/966c1abf/" title="日志打印规范"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">日志打印规范</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
 </div>
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
     
@@ -617,6 +862,99 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
