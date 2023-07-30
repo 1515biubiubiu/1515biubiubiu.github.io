@@ -16,15 +16,15 @@
   <meta name="author" content="dsy">
   <meta name="keywords" content="Spring">
   
-    <meta name="description" content="Instroduction to the Spring IoC Container and Beans">
+    <meta name="description" content="Instroduction to the Spring IoC Container and Beans 这一章讨论Spring Framework实现的控制反转（IoC）原则。IoC也被称为依赖注入（DI）。这是一个过程，对象仅通过构造函数参数、工厂方法的参数或在构造对象实例或从工厂方法返回后在对象实例上设置的属性来定义其依赖项（即它们使用的其他对象）。然后容器创建bean时注入这些依赖项。这个过">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5、Spring IoC容器和Bean简介">
 <meta property="og:url" content="https://1515biubiubiu.github.io/78a192b8/index.html">
 <meta property="og:site_name" content="dsy&#39;s blog">
-<meta property="og:description" content="Instroduction to the Spring IoC Container and Beans">
+<meta property="og:description" content="Instroduction to the Spring IoC Container and Beans 这一章讨论Spring Framework实现的控制反转（IoC）原则。IoC也被称为依赖注入（DI）。这是一个过程，对象仅通过构造函数参数、工厂方法的参数或在构造对象实例或从工厂方法返回后在对象实例上设置的属性来定义其依赖项（即它们使用的其他对象）。然后容器创建bean时注入这些依赖项。这个过">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-29T14:22:55.532Z">
-<meta property="article:modified_time" content="2023-07-29T14:24:53.000Z">
+<meta property="article:modified_time" content="2023-07-30T10:54:47.000Z">
 <meta property="article:author" content="dsy">
 <meta property="article:tag" content="Spring">
 <meta property="article:tag" content="Spring Framework">
@@ -248,7 +248,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          44 字
+          808 字
         
       </span>
     
@@ -259,7 +259,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -316,6 +316,24 @@
               <div class="markdown-body">
                 
                 <h1>Instroduction to the Spring IoC Container and Beans</h1>
+<p>这一章讨论Spring Framework实现的控制反转（IoC）原则。IoC也被称为依赖注入（DI）。这是一个过程，对象仅通过构造函数参数、工厂方法的参数或在构造对象实例或从工厂方法返回后在对象实例上设置的属性来定义其依赖项（即它们使用的其他对象）。然后容器创建bean时注入这些依赖项。这个过程基本上与bean本身通过直接构造类或Service Locator模式等机制来控制其依赖项的实例化或定位是相反的（因此称为控制反转）。</p>
+<p><code>org.springframework.beans</code>和<code>org.springframework.context</code>包是Spring Framework的IoC容器的基础。<code>BeanFactory</code>接口提供了一个高级配置机制，能够管理任何类型的对象。<code>ApplicationContext</code>是<code>BeanFactory</code>的子接口。它添加了以下功能：</p>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>更容易与Spring的AOP特性集成</p>
+</li>
+<li class="lvl-2">
+<p>消息资源处理（用于国际化）</p>
+</li>
+<li class="lvl-2">
+<p>事件发布</p>
+</li>
+<li class="lvl-2">
+<p>用于Web应用程序的<code>WebApplicationContext</code>等应用程序层特定上下文。</p>
+</li>
+</ul>
+<p>简而言之，<code>BeanFactory</code>提供了配置框架和基本功能，而<code>ApplicationContext</code>添加了更多企业级特定功能。<code>ApplicationContext</code>是<code>BeanFactory</code>的完整超集并且在本章中专门用于描述Spring的IoC容器。如果想了解如何使用<code>BeanFactory</code>而不是<code>ApplicationContext</code>，请查看涵盖<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-framework/reference/core/beans/beanfactory.html"><code>BeanFactory</code>API</a>的章节。</p>
+<p>在Spring中，由Spring IoC容器管理并构成应用程序骨干的对象被称为bean。Bean是由Spring IoC容器实例化、组装和管理的对象。否则，Bean只是应用程序中的众多对象之一。Bean及其之间的依赖关系在容器使用的配置元数据中反应出来。</p>
 
                 
               </div>
@@ -412,7 +430,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023-07-29 22:24:53</div>
+          <div>2023-07-30 18:54:47</div>
         </div>
       
       
