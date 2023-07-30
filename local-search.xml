@@ -82,7 +82,7 @@
     <link href="/b346a7e3/"/>
     <url>/b346a7e3/</url>
     
-    <content type="html"><![CDATA[<h1>The IoC Container</h1><p>本章介绍Spring的控制反转（IoC）容器。</p><h1>Section Summary</h1><ul class="lvl-0"><li class="lvl-2"><p><a href="/78a192b8">Spring IoC容器和Bean简介</a></p></li><li class="lvl-2"><p>容器概述</p></li><li class="lvl-2"><p>Bean概述</p></li><li class="lvl-2"><p>依赖关系</p></li><li class="lvl-2"><p>Bean作用域</p></li><li class="lvl-2"><p>自定义Bean的性质</p></li><li class="lvl-2"><p>Bean定义继承</p></li><li class="lvl-2"><p>容器扩展点</p></li><li class="lvl-2"><p>基于注解的容器配置</p></li><li class="lvl-2"><p>类路径扫描和托管组件</p></li><li class="lvl-2"><p>使用JSR 330标准注解</p></li><li class="lvl-2"><p>基于Java的容器配置</p></li><li class="lvl-2"><p>环境抽象</p></li><li class="lvl-2"><p>注册LoadTimeWeaver</p></li><li class="lvl-2"><p>ApplicationContext的附加功能</p></li><li class="lvl-2"><p>BeanFactory API</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1>The IoC Container</h1><p>本章介绍Spring的控制反转（IoC）容器。</p><h1>Section Summary</h1><ul class="lvl-0"><li class="lvl-2"><p><a href="/78a192b8">Spring IoC容器和Bean简介</a></p></li><li class="lvl-2"><p><a href="/4573540c">容器概述</a></p></li><li class="lvl-2"><p>Bean概述</p></li><li class="lvl-2"><p>依赖关系</p></li><li class="lvl-2"><p>Bean作用域</p></li><li class="lvl-2"><p>自定义Bean的性质</p></li><li class="lvl-2"><p>Bean定义继承</p></li><li class="lvl-2"><p>容器扩展点</p></li><li class="lvl-2"><p>基于注解的容器配置</p></li><li class="lvl-2"><p>类路径扫描和托管组件</p></li><li class="lvl-2"><p>使用JSR 330标准注解</p></li><li class="lvl-2"><p>基于Java的容器配置</p></li><li class="lvl-2"><p>环境抽象</p></li><li class="lvl-2"><p>注册LoadTimeWeaver</p></li><li class="lvl-2"><p>ApplicationContext的附加功能</p></li><li class="lvl-2"><p>BeanFactory API</p></li></ul>]]></content>
     
     
     <categories>
