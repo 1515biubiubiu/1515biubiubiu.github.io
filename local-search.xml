@@ -4,6 +4,43 @@
   
   
   <entry>
+    <title>6、容器概览</title>
+    <link href="/78a192b8/"/>
+    <url>/78a192b8/</url>
+    
+    <content type="html"><![CDATA[<h1>Container Overview</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring</tag>
+      
+      <tag>Spring Framework</tag>
+      
+      <tag>入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>5、Spring IoC容器和Bean简介</title>
     <link href="/78a192b8/"/>
     <url>/78a192b8/</url>
