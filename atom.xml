@@ -49,6 +49,14 @@
     <updated>2023-07-29T12:37:30.000Z</updated>
     
     
+      
+      
+        
+        
+    <summary type="html">&lt;h2</summary>
+        
+      
+    
     
     
     <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
@@ -378,7 +386,8 @@
       
         
         
-    <summary type="html">&lt;h1&gt;Container</summary>
+    <summary type="html">&lt;h1&gt;Container Overview&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;org.springframework.context.ApplicationContext&lt;/code&gt;接口代表Spring</summary>
         
       
     

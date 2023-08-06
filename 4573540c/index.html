@@ -16,12 +16,12 @@
   <meta name="author" content="dsy">
   <meta name="keywords" content="Spring">
   
-    <meta name="description" content="Container Overview">
+    <meta name="description" content="Container Overview org.springframework.context.ApplicationContext接口代表Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据来获取实例化、配置和组装对象的指令。配置元数据可以用XML、Java注解或者Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间的复杂相互依赖关系。 Spring提供了几">
 <meta property="og:type" content="article">
 <meta property="og:title" content="6、容器概览">
 <meta property="og:url" content="https://1515biubiubiu.github.io/4573540c/index.html">
 <meta property="og:site_name" content="dsy&#39;s blog">
-<meta property="og:description" content="Container Overview">
+<meta property="og:description" content="Container Overview org.springframework.context.ApplicationContext接口代表Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据来获取实例化、配置和组装对象的指令。配置元数据可以用XML、Java注解或者Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间的复杂相互依赖关系。 Spring提供了几">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-30T11:04:44.344Z">
 <meta property="article:modified_time" content="2023-07-30T11:08:07.000Z">
@@ -246,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          17 字
+          542 字
         
       </span>
     
@@ -257,7 +257,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -314,6 +314,9 @@
               <div class="markdown-body">
                 
                 <h1>Container Overview</h1>
+<p><code>org.springframework.context.ApplicationContext</code>接口代表Spring IoC容器，负责实例化、配置和组装bean。容器通过读取配置元数据来获取实例化、配置和组装对象的指令。配置元数据可以用XML、Java注解或者Java代码表示。它允许您表达组成应用程序的对象以及这些对象之间的复杂相互依赖关系。</p>
+<p>Spring提供了几个<code>ApplicaitonContext</code>接口的实现。在独立应用程序中，通常是创建<code>ClassPathXmlApplicationContext</code>或<code>FileSystemXmlApplicationContext</code>的实例。虽然XML一直是定义配置元数据的传统格式，但您可以通过提供少量的XML配置来指示容器使用Java注解或代码作为元数据格式，从而声明性地启用对这些附加元数据格式的支持。</p>
+<p>在大多数应用程序场景中，通常不需要显示的用户代码来实例化一个或多个Spring IoC容器。例如，在一个web应用程序场景中，通常只需要在应用程序的<code>web.xml</code>文件中添加简单的八行左右的样板式的web描述符XML，就可以完成容器的实例化（参见<a href="/ba168e02#">Web应用程序中的ApplicationContext实例化的便捷方式</a>）。</p>
 
                 
               </div>

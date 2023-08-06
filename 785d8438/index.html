@@ -317,11 +317,11 @@
 <p>Spring使创建Java企业应用程序变得简单。它提供在企业环境中使用Java语言所需的一切，支持将Groovy和Kotlin作为在JVM上的替代语言，并且可以根据应用程序的需要灵活地创建多种架构。从Spring Framework 6.0开始，Spring需要Java 17+。</p>
 <p>Spring支持广泛的应用场景。在大型企业中，应用程序往往存在很长时间，并且必须运行在JDK和应用服务器上，其升级周期不受开发人员的控制。其他人可能作为嵌入服务器的单个jar运行，可能在云环境中，还有一些可能是不需要服务器的独立应用程序（例如批处理和集成工作负载）。</p>
 <p>Spring是开源的。它有一个庞大而活跃的社区，可以根据各种实际用例提供持续的反馈。这帮助Spring在很长一段时间内成功发展。</p>
-<h2 id="1-我们所说的“Spring”是什么意思">1. 我们所说的“Spring”是什么意思</h2>
+<h2 id="我们所说的“Spring”是什么意思">我们所说的“Spring”是什么意思</h2>
 <p>“Spring”一词在不同的上下文中意味着不同的事物。它可以用来指代Spring Framework项目本身，这就是一切的开始。随着时间的推移，其他Spring项目已经建立在Spring Framework之上。大多数情况下，当人们说“Spring”时，他们指的是整个项目系列。本参考文档侧重于基础：Spring Framework本身。</p>
 <p>Spring Framework是分成模块的。应用程序可以选择它们需要的模块。核心是核心容器的模块，包括配置模型和依赖注入机制。除此之外，Spring Framework还为不同的应用程序架构提供了基础支持，包括消息传递，数据的事务和持久性，以及web。它还包括基于Servlet的Spring MVC Web框架，以及并行的Spring WebFlux反应式Web框架。</p>
 <p>一个关于模块的说明：Spring的框架jar包们允许部署到JDK9的模块路径（“Jigsaw”<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：https://openjdk.org/projects/jigsaw">[1]</span></a></sup>）。为了在支持Jigsaw的应用程序中使用，Spring Framework 5 jar带有“Automatic-Module-Name”<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Automatic-Module-Name 是一个 jar 包清单文件的条目，它允许开发人员为不包含 `module-info.java` 的 jar 包定义模块名称。如果 jar 包中没有 Automatic-Module-Name条目，JDK 9 会自动使用 jar 文件的文件名（不含扩展名）作为模块名称。例如：可以在spring-core-6.0.8.jar中的META-INF目录的MANIFEST.MF文件中找到`Automatic-Module-Name: spring.core`。">[2]</span></a></sup>清单条目，这些条目定义了独立于jar工件的稳定语言级模块名称（“Spring.core“、”Spring.context“等）（jar遵循相同的命名模式，使用“-”而不是“.”，例如“Spring-core”和“Spring-context”）。当然，Spring的框架jar可以用在JDK8和9+的类路径上正常工作。</p>
-<h2 id="2-Spring和Spring-Framework的历史">2. Spring和Spring Framework的历史</h2>
+<h2 id="Spring和Spring-Framework的历史">Spring和Spring Framework的历史</h2>
 <p>Spring作为应对早期J2EE的复杂性的产品于2003年应运而生。虽然有些人认为Java EE和它的现代的继任者Jakarta EE与Spring存在竞争关系，它们实际上是互补的。Spring编程模型不包含Jakarta EE平台规范；Spring从传统EE规范所涵盖的所有相关规范、标准和技术中精选的个别规范：</p>
 <ul class="lvl-0">
 <li class="lvl-2">
@@ -353,7 +353,7 @@
 <p>从Spring Framework 6.0起，Spring已经升级到Jakarta EE 9（例如：Servlet 5.0+，JPA 3.0+），基于<code>Jakarta</code>命名空间代替传统的<code>javax</code>包。以EE 9作为最低要求并且已经支持EE 10。Spring已经做好为进一步演化的Jakarta EE API提供开箱即用的支持的准备。Spring Framework 6.0完全兼容Tomcat 10.1，Jetty 11和Undertow 2.3作为web服务器。也与Hibernate ORM 6.1兼容。</p>
 <p>随着时间的推移，Java/Jakarta EE在应用程序开发中的角色发生了变化。在J2EE和Spring早期，应用程序是为了部署到一个应用服务器而创建的。如今，在Spring Boot的帮助下，应用程序以DevOps和云友好的方式创建，Servlet容器被嵌入其中，而且轻松易改。从Spring Framework 5开始，一个WebFlux应用程序甚至不直接使用Servlet API并且可以运行在不是Servlet容器的服务器上（如Netty）。</p>
 <p>Spring继续创新和演进。除了Spring Framework外，还有其他项目，例如Spring Boot，Spring Security，Spring Data，Spring Cloud，Spring Batch等。重要的是记住每个项目都有自己的源码仓库，问题追踪器，发布节奏。请访问<a href="spring.io/projects">spring.io/projects</a>查看完整的Spring项目列表。</p>
-<h2 id="3-设计理念">3. 设计理念</h2>
+<h2 id="设计理念">设计理念</h2>
 <p>当您了解一个框架时，重要的是不仅要了解它的用途，还要了解它遵循的原则。以下是Spring框架的指导原则：</p>
 <ul class="lvl-0">
 <li class="lvl-2">
@@ -372,11 +372,11 @@
 <p>为代码质量设定高标准。Spring框架非常强调有意义、最新且最准确的javadoc。它是极少数可以声称干净的代码结构且包之间没有循环依赖关系的项目之一。</p>
 </li>
 </ul>
-<h2 id="4-反馈和贡献">4. 反馈和贡献</h2>
+<h2 id="反馈和贡献">反馈和贡献</h2>
 <p>对于操作方法问题或诊断或调试问题，我们建议使用Stack Overflow。单击<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/tagged/spring+or+spring-mvc+or+spring-aop+or+spring-jdbc+or+spring-r2dbc+or+spring-transactions+or+spring-annotations+or+spring-jms+or+spring-el+or+spring-test+or+spring+or+spring-orm+or+spring-jmx+or+spring-cache+or+spring-webflux+or+spring-rsocket?tab=Newest">此处</a>获取要在Stack Overflow上使用的建议标签列表。如果您相当确定Spring框架中存在问题或想要建议某个功能，请使用<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework/issues">GitHub Issues</a>。</p>
 <p>如果您有解决方案或建议的修复方案，您可以在<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework">Github</a>上提交拉取请求（Request Pull）。但是，请记住，除了最简单的问题外，我们希望您首先在问题跟踪器中提交一个工单（Ticket），在那里进行讨论并留下记录供将来参考。</p>
 <p>更多细节请参阅项目的顶层页面上的<a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-framework/blob/main/CONTRIBUTING.md">CONTRIBUTING</a>。</p>
-<h2 id="5-入门">5. 入门</h2>
+<h2 id="入门">入门</h2>
 <p>如果您刚开始学习Spring，您可能希望通过创建一个基于<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-boot">Spring Boot</a>的应用程序来开始使用Spring框架。Spring Boot提供了一种快速（并且偏向特定观点：指在某些方面做出了一些预设和默认值）的方式来创建一个生产就绪的基于Spring的应用程序。它基于Spring Framework，倾向于约定优于配置，并旨在让您尽快上手。</p>
 <p>您可以使用<a target="_blank" rel="noopener" href="https://start.spring.io/">start.spring.io</a>来生成一个基本的项目，或者按照<a target="_blank" rel="noopener" href="https://spring.io/guides">&quot;Getting Started&quot;指南</a>之一来操作，比如<a target="_blank" rel="noopener" href="https://spring.io/guides/gs/rest-service/">&quot;Getting Started Building a RESTful Web Service&quot;</a>。除了更易于理解，这些指南还着重于具体任务，并且大部分都是基于Spring Boot的。它们还涵盖了Spring系列中的其他项目，当您解决特定问题时可能会考虑到这些项目。</p>
 <section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>Jigsaw是OpenJDK项目下的一个子项目。这个项目旨在在Java语言中引入模块系统，及其在JDK源码和Java运行时中的实现。简单说其具体实现就是JDK9中的模块系统。具体介绍可查看官方文档介绍：<a target="_blank" rel="noopener" href="https://openjdk.org/projects/jigsaw">https://openjdk.org/projects/jigsaw</a>
