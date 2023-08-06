@@ -16,19 +16,17 @@
   <meta name="author" content="dsy">
   <meta name="keywords" content="Spring">
   
-    <meta name="description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概览   Bean概述   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
+    <meta name="description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概览   Bean概览   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4、The IoC Container">
 <meta property="og:url" content="https://1515biubiubiu.github.io/b346a7e3/index.html">
 <meta property="og:site_name" content="dsy&#39;s blog">
-<meta property="og:description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概览   Bean概述   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
+<meta property="og:description" content="The IoC Container 本章介绍Spring的控制反转（IoC）容器。 Section Summary   Spring IoC容器和Bean简介   容器概览   Bean概览   依赖关系   Bean作用域   自定义Bean的性质   Bean定义继承   容器扩展点   基于注解的容器配置   类路径扫描和托管组件   使用JSR 330标准注解   基于Java的容器配置">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-29T14:04:21.828Z">
 <meta property="article:modified_time" content="2023-07-29T14:07:53.000Z">
 <meta property="article:author" content="dsy">
-<meta property="article:tag" content="Spring">
-<meta property="article:tag" content="Spring Framework">
-<meta property="article:tag" content="入门">
+<meta property="article:tag" content="Spring,Spring Framework,入门">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -326,46 +324,46 @@
 <p><a href="/4573540c">容器概览</a></p>
 </li>
 <li class="lvl-2">
-<p>Bean概述</p>
+<p><a href="/4cd6495d">Bean概览</a></p>
 </li>
 <li class="lvl-2">
-<p>依赖关系</p>
+<p><a href="/639e8e28">依赖关系</a></p>
 </li>
 <li class="lvl-2">
-<p>Bean作用域</p>
+<p><a href="/22692818">Bean作用域</a></p>
 </li>
 <li class="lvl-2">
-<p>自定义Bean的性质</p>
+<p><a href="/17514971">自定义Bean的性质</a></p>
 </li>
 <li class="lvl-2">
-<p>Bean定义继承</p>
+<p><a href="/d7c65eb4">Bean定义继承</a></p>
 </li>
 <li class="lvl-2">
-<p>容器扩展点</p>
+<p><a href="/496cd36b">容器扩展点</a></p>
 </li>
 <li class="lvl-2">
-<p>基于注解的容器配置</p>
+<p><a href="/db8fd3f5">基于注解的容器配置</a></p>
 </li>
 <li class="lvl-2">
-<p>类路径扫描和托管组件</p>
+<p><a href="/7eefb566">类路径扫描和托管组件</a></p>
 </li>
 <li class="lvl-2">
-<p>使用JSR 330标准注解</p>
+<p><a href="/17d23033">使用JSR 330标准注解</a></p>
 </li>
 <li class="lvl-2">
-<p>基于Java的容器配置</p>
+<p><a href="/64cf65f">基于Java的容器配置</a></p>
 </li>
 <li class="lvl-2">
-<p>环境抽象</p>
+<p><a href="/d742da52">环境抽象</a></p>
 </li>
 <li class="lvl-2">
-<p>注册LoadTimeWeaver</p>
+<p><a href="/88b1c8dd">注册LoadTimeWeaver</a></p>
 </li>
 <li class="lvl-2">
-<p>ApplicationContext的附加功能</p>
+<p><a href="/ba168e02">ApplicationContext的附加功能</a></p>
 </li>
 <li class="lvl-2">
-<p>BeanFactory API</p>
+<p><a href="/7ff6e852">BeanFactory API</a></p>
 </li>
 </ul>
 
@@ -429,11 +427,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Spring/">#Spring</a>
-      
-        <a href="/tags/Spring-Framework/">#Spring Framework</a>
-      
-        <a href="/tags/%E5%85%A5%E9%97%A8/">#入门</a>
+        <a href="/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/">#Spring,Spring Framework,入门</a>
       
     </div>
   
@@ -548,7 +542,7 @@
         aria-expanded="true"
       >
         Java
-        <span class="list-group-count">(6)</span>
+        <span class="list-group-count">(20)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -575,7 +569,7 @@
         aria-expanded="true"
       >
         Spring Framework
-        <span class="list-group-count">(6)</span>
+        <span class="list-group-count">(20)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -602,7 +596,7 @@
         aria-expanded="true"
       >
         入门
-        <span class="list-group-count">(6)</span>
+        <span class="list-group-count">(20)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -624,15 +618,6 @@
         </a>
       
     
-      
-      
-        <a href="/785d8438/" title="2、概述"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">2、概述</span>
-        </a>
-      
-    
   </div>
 
           
@@ -647,7 +632,7 @@
         aria-expanded="true"
       >
         核心技术
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(19)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -659,6 +644,15 @@
           
   <div class="category-post-list">
     
+    
+      
+      
+        <a href="/785d8438/" title="2、概述"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">2、概述</span>
+        </a>
+      
     
       
       
@@ -683,7 +677,7 @@
         aria-expanded="true"
       >
         IoC容器
-        <span class="list-group-count">(3)</span>
+        <span class="list-group-count">(17)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -719,6 +713,132 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">6、容器概览</span>
+        </a>
+      
+    
+      
+      
+        <a href="/4cd6495d/" title="7、Bean概览"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">7、Bean概览</span>
+        </a>
+      
+    
+      
+      
+        <a href="/639e8e28/" title="8、依赖关系"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">8、依赖关系</span>
+        </a>
+      
+    
+      
+      
+        <a href="/22692818/" title="9、Bean作用域"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">9、Bean作用域</span>
+        </a>
+      
+    
+      
+      
+        <a href="/17514971/" title="10、自定义Bean的性质"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">10、自定义Bean的性质</span>
+        </a>
+      
+    
+      
+      
+        <a href="/d7c65eb4/" title="11、Bean定义继承"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">11、Bean定义继承</span>
+        </a>
+      
+    
+      
+      
+        <a href="/496cd36b/" title="12、容器扩展点"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">12、容器扩展点</span>
+        </a>
+      
+    
+      
+      
+        <a href="/db8fd3f5/" title="13、基于注解的容器配置"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">13、基于注解的容器配置</span>
+        </a>
+      
+    
+      
+      
+        <a href="/7eefb566/" title="14、类路径扫描和托管组件"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">14、类路径扫描和托管组件</span>
+        </a>
+      
+    
+      
+      
+        <a href="/17d23033/" title="15、使用JSR 330标准注解"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">15、使用JSR 330标准注解</span>
+        </a>
+      
+    
+      
+      
+        <a href="/64cf65f/" title="16、基于Java的容器配置"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">16、基于Java的容器配置</span>
+        </a>
+      
+    
+      
+      
+        <a href="/d742da52/" title="17、环境抽象"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">17、环境抽象</span>
+        </a>
+      
+    
+      
+      
+        <a href="/88b1c8dd/" title="18、注册LoadTimeWeaver"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">18、注册LoadTimeWeaver</span>
+        </a>
+      
+    
+      
+      
+        <a href="/ba168e02/" title="19、ApplicationContext的附加功能"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">19、ApplicationContext的附加功能</span>
+        </a>
+      
+    
+      
+      
+        <a href="/7ff6e852/" title="20、BeanFactory API"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">20、BeanFactory API</span>
         </a>
       
     

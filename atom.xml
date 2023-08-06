@@ -6,7 +6,7 @@
   <link href="https://1515biubiubiu.github.io/atom.xml" rel="self"/>
   
   <link href="https://1515biubiubiu.github.io/"/>
-  <updated>2023-07-30T11:08:07.000Z</updated>
+  <updated>2023-07-29T12:37:30.000Z</updated>
   <id>https://1515biubiubiu.github.io/</id>
   
   <author>
@@ -15,6 +15,356 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20、BeanFactory API</title>
+    <link href="https://1515biubiubiu.github.io/7ff6e852/"/>
+    <id>https://1515biubiubiu.github.io/7ff6e852/</id>
+    <published>2023-08-06T12:48:23.921Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>19、ApplicationContext的附加功能</title>
+    <link href="https://1515biubiubiu.github.io/ba168e02/"/>
+    <id>https://1515biubiubiu.github.io/ba168e02/</id>
+    <published>2023-08-06T12:47:42.679Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>18、注册LoadTimeWeaver</title>
+    <link href="https://1515biubiubiu.github.io/88b1c8dd/"/>
+    <id>https://1515biubiubiu.github.io/88b1c8dd/</id>
+    <published>2023-08-06T12:47:04.216Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>17、环境抽象</title>
+    <link href="https://1515biubiubiu.github.io/d742da52/"/>
+    <id>https://1515biubiubiu.github.io/d742da52/</id>
+    <published>2023-08-06T12:46:18.052Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>16、基于Java的容器配置</title>
+    <link href="https://1515biubiubiu.github.io/64cf65f/"/>
+    <id>https://1515biubiubiu.github.io/64cf65f/</id>
+    <published>2023-08-06T12:45:48.903Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>15、使用JSR 330标准注解</title>
+    <link href="https://1515biubiubiu.github.io/17d23033/"/>
+    <id>https://1515biubiubiu.github.io/17d23033/</id>
+    <published>2023-08-06T12:43:02.998Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>14、类路径扫描和托管组件</title>
+    <link href="https://1515biubiubiu.github.io/7eefb566/"/>
+    <id>https://1515biubiubiu.github.io/7eefb566/</id>
+    <published>2023-08-06T12:42:05.161Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>13、基于注解的容器配置</title>
+    <link href="https://1515biubiubiu.github.io/db8fd3f5/"/>
+    <id>https://1515biubiubiu.github.io/db8fd3f5/</id>
+    <published>2023-08-06T12:41:27.538Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>12、容器扩展点</title>
+    <link href="https://1515biubiubiu.github.io/496cd36b/"/>
+    <id>https://1515biubiubiu.github.io/496cd36b/</id>
+    <published>2023-08-06T12:41:01.896Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>11、Bean定义继承</title>
+    <link href="https://1515biubiubiu.github.io/d7c65eb4/"/>
+    <id>https://1515biubiubiu.github.io/d7c65eb4/</id>
+    <published>2023-08-06T12:40:34.993Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10、自定义Bean的性质</title>
+    <link href="https://1515biubiubiu.github.io/17514971/"/>
+    <id>https://1515biubiubiu.github.io/17514971/</id>
+    <published>2023-08-06T12:39:54.821Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9、Bean作用域</title>
+    <link href="https://1515biubiubiu.github.io/22692818/"/>
+    <id>https://1515biubiubiu.github.io/22692818/</id>
+    <published>2023-08-06T12:39:25.192Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8、依赖关系</title>
+    <link href="https://1515biubiubiu.github.io/639e8e28/"/>
+    <id>https://1515biubiubiu.github.io/639e8e28/</id>
+    <published>2023-08-06T12:38:28.596Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7、Bean概览</title>
+    <link href="https://1515biubiubiu.github.io/4cd6495d/"/>
+    <id>https://1515biubiubiu.github.io/4cd6495d/</id>
+    <published>2023-08-06T12:36:49.720Z</published>
+    <updated>2023-07-29T12:37:30.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>6、容器概览</title>
@@ -45,11 +395,7 @@
     <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
     
     
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -83,11 +429,7 @@
     <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
     
     
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -125,11 +467,7 @@
     <category term="IoC容器" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/IoC%E5%AE%B9%E5%99%A8/"/>
     
     
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -162,11 +500,7 @@
     <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   
@@ -221,45 +555,10 @@
     
     <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
     
-    
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1、README</title>
-    <link href="https://1515biubiubiu.github.io/b5385ca/"/>
-    <id>https://1515biubiubiu.github.io/b5385ca/</id>
-    <published>2023-05-27T16:17:20.555Z</published>
-    <updated>2023-05-03T14:04:38.000Z</updated>
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本分类（&lt;a href=&quot;https://1515biubiubiu.github.io/categories/Java/&quot;&gt;Java&lt;/a&gt; &amp;gt; &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="Spring" scheme="https://1515biubiubiu.github.io/tags/Spring/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/tags/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/tags/%E5%85%A5%E9%97%A8/"/>
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   

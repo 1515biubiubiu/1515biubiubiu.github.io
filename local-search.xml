@@ -4,6 +4,468 @@
   
   
   <entry>
+    <title>20、BeanFactory API</title>
+    <link href="/7ff6e852/"/>
+    <url>/7ff6e852/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>19、ApplicationContext的附加功能</title>
+    <link href="/ba168e02/"/>
+    <url>/ba168e02/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>18、注册LoadTimeWeaver</title>
+    <link href="/88b1c8dd/"/>
+    <url>/88b1c8dd/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>17、环境抽象</title>
+    <link href="/d742da52/"/>
+    <url>/d742da52/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>16、基于Java的容器配置</title>
+    <link href="/64cf65f/"/>
+    <url>/64cf65f/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>15、使用JSR 330标准注解</title>
+    <link href="/17d23033/"/>
+    <url>/17d23033/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>14、类路径扫描和托管组件</title>
+    <link href="/7eefb566/"/>
+    <url>/7eefb566/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>13、基于注解的容器配置</title>
+    <link href="/db8fd3f5/"/>
+    <url>/db8fd3f5/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>12、容器扩展点</title>
+    <link href="/496cd36b/"/>
+    <url>/496cd36b/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>11、Bean定义继承</title>
+    <link href="/d7c65eb4/"/>
+    <url>/d7c65eb4/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>10、自定义Bean的性质</title>
+    <link href="/17514971/"/>
+    <url>/17514971/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>9、Bean作用域</title>
+    <link href="/22692818/"/>
+    <url>/22692818/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>8、依赖关系</title>
+    <link href="/639e8e28/"/>
+    <url>/639e8e28/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>7、Bean概览</title>
+    <link href="/4cd6495d/"/>
+    <url>/4cd6495d/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>Spring Framework</category>
+      
+      <category>入门</category>
+      
+      <category>核心技术</category>
+      
+      <category>IoC容器</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring,Spring Framework,入门</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>6、容器概览</title>
     <link href="/4573540c/"/>
     <url>/4573540c/</url>
@@ -28,11 +490,7 @@
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
@@ -45,7 +503,7 @@
     <link href="/78a192b8/"/>
     <url>/78a192b8/</url>
     
-    <content type="html"><![CDATA[<h1>Instroduction to the Spring IoC Container and Beans</h1><p>这一章讨论Spring Framework实现的控制反转（IoC）原则。IoC也被称为依赖注入（DI）。这是一个过程，对象仅通过构造函数参数、工厂方法的参数或在构造对象实例或从工厂方法返回后在对象实例上设置的属性来定义其依赖项（即它们使用的其他对象）。然后容器创建bean时注入这些依赖项。这个过程基本上与bean本身通过直接构造类或Service Locator模式等机制来控制其依赖项的实例化或定位是相反的（因此称为控制反转）。</p><p><code>org.springframework.beans</code>和<code>org.springframework.context</code>包是Spring Framework的IoC容器的基础。<code>BeanFactory</code>接口提供了一个高级配置机制，能够管理任何类型的对象。<code>ApplicationContext</code>是<code>BeanFactory</code>的子接口。它添加了以下功能：</p><ul class="lvl-0"><li class="lvl-2"><p>更容易与Spring的AOP特性集成</p></li><li class="lvl-2"><p>消息资源处理（用于国际化）</p></li><li class="lvl-2"><p>事件发布</p></li><li class="lvl-2"><p>用于Web应用程序的<code>WebApplicationContext</code>等应用程序层特定上下文。</p></li></ul><p>简而言之，<code>BeanFactory</code>提供了配置框架和基本功能，而<code>ApplicationContext</code>添加了更多企业级特定功能。<code>ApplicationContext</code>是<code>BeanFactory</code>的完整超集并且在本章中专门用于描述Spring的IoC容器。如果想了解如何使用<code>BeanFactory</code>而不是<code>ApplicationContext</code>，请查看涵盖<a href="https://docs.spring.io/spring-framework/reference/core/beans/beanfactory.html"><code>BeanFactory</code>API</a>的章节。</p><p>在Spring中，由Spring IoC容器管理并构成应用程序骨干的对象被称为bean。Bean是由Spring IoC容器实例化、组装和管理的对象。否则，Bean只是应用程序中的众多对象之一。Bean及其之间的依赖关系在容器使用的配置元数据中反应出来。</p>]]></content>
+    <content type="html"><![CDATA[<h1>Instroduction to the Spring IoC Container and Beans</h1><p>这一章讨论Spring Framework实现的控制反转（IoC）原则。IoC也被称为依赖注入（DI）。这是一个过程，对象仅通过构造函数参数、工厂方法的参数或在构造对象实例或从工厂方法返回后在对象实例上设置的属性来定义其依赖项（即它们使用的其他对象）。然后容器创建bean时注入这些依赖项。这个过程基本上与bean本身通过直接构造类或Service Locator模式等机制来控制其依赖项的实例化或定位是相反的（因此称为控制反转）。</p><p><code>org.springframework.beans</code>和<code>org.springframework.context</code>包是Spring Framework的IoC容器的基础。<code>BeanFactory</code>接口提供了一个高级配置机制，能够管理任何类型的对象。<code>ApplicationContext</code>是<code>BeanFactory</code>的子接口。它添加了以下功能：</p><ul class="lvl-0"><li class="lvl-2"><p>更容易与Spring的AOP特性集成</p></li><li class="lvl-2"><p>消息资源处理（用于国际化）</p></li><li class="lvl-2"><p>事件发布</p></li><li class="lvl-2"><p>用于Web应用程序的<code>WebApplicationContext</code>等应用程序层特定上下文。</p></li></ul><p>简而言之，<code>BeanFactory</code>提供了配置框架和基本功能，而<code>ApplicationContext</code>添加了更多企业级特定功能。<code>ApplicationContext</code>是<code>BeanFactory</code>的完整超集并且在本章中专门用于描述Spring的IoC容器。如果想了解如何使用<code>BeanFactory</code>而不是<code>ApplicationContext</code>，请查看涵盖<a href="/7ff6e852"><code>BeanFactory</code>API</a>的章节。</p><p>在Spring中，由Spring IoC容器管理并构成应用程序骨干的对象被称为bean。Bean是由Spring IoC容器实例化、组装和管理的对象。否则，Bean只是应用程序中的众多对象之一。Bean及其之间的依赖关系在容器使用的配置元数据中反应出来。</p>]]></content>
     
     
     <categories>
@@ -65,11 +523,7 @@
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
@@ -82,7 +536,7 @@
     <link href="/b346a7e3/"/>
     <url>/b346a7e3/</url>
     
-    <content type="html"><![CDATA[<h1>The IoC Container</h1><p>本章介绍Spring的控制反转（IoC）容器。</p><h1>Section Summary</h1><ul class="lvl-0"><li class="lvl-2"><p><a href="/78a192b8">Spring IoC容器和Bean简介</a></p></li><li class="lvl-2"><p><a href="/4573540c">容器概览</a></p></li><li class="lvl-2"><p>Bean概述</p></li><li class="lvl-2"><p>依赖关系</p></li><li class="lvl-2"><p>Bean作用域</p></li><li class="lvl-2"><p>自定义Bean的性质</p></li><li class="lvl-2"><p>Bean定义继承</p></li><li class="lvl-2"><p>容器扩展点</p></li><li class="lvl-2"><p>基于注解的容器配置</p></li><li class="lvl-2"><p>类路径扫描和托管组件</p></li><li class="lvl-2"><p>使用JSR 330标准注解</p></li><li class="lvl-2"><p>基于Java的容器配置</p></li><li class="lvl-2"><p>环境抽象</p></li><li class="lvl-2"><p>注册LoadTimeWeaver</p></li><li class="lvl-2"><p>ApplicationContext的附加功能</p></li><li class="lvl-2"><p>BeanFactory API</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1>The IoC Container</h1><p>本章介绍Spring的控制反转（IoC）容器。</p><h1>Section Summary</h1><ul class="lvl-0"><li class="lvl-2"><p><a href="/78a192b8">Spring IoC容器和Bean简介</a></p></li><li class="lvl-2"><p><a href="/4573540c">容器概览</a></p></li><li class="lvl-2"><p><a href="/4cd6495d">Bean概览</a></p></li><li class="lvl-2"><p><a href="/639e8e28">依赖关系</a></p></li><li class="lvl-2"><p><a href="/22692818">Bean作用域</a></p></li><li class="lvl-2"><p><a href="/17514971">自定义Bean的性质</a></p></li><li class="lvl-2"><p><a href="/d7c65eb4">Bean定义继承</a></p></li><li class="lvl-2"><p><a href="/496cd36b">容器扩展点</a></p></li><li class="lvl-2"><p><a href="/db8fd3f5">基于注解的容器配置</a></p></li><li class="lvl-2"><p><a href="/7eefb566">类路径扫描和托管组件</a></p></li><li class="lvl-2"><p><a href="/17d23033">使用JSR 330标准注解</a></p></li><li class="lvl-2"><p><a href="/64cf65f">基于Java的容器配置</a></p></li><li class="lvl-2"><p><a href="/d742da52">环境抽象</a></p></li><li class="lvl-2"><p><a href="/88b1c8dd">注册LoadTimeWeaver</a></p></li><li class="lvl-2"><p><a href="/ba168e02">ApplicationContext的附加功能</a></p></li><li class="lvl-2"><p><a href="/7ff6e852">BeanFactory API</a></p></li></ul>]]></content>
     
     
     <categories>
@@ -102,11 +556,7 @@
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
@@ -137,11 +587,7 @@
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
@@ -190,16 +636,14 @@
       
       <category>入门</category>
       
+      <category>核心技术</category>
+      
     </categories>
     
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
@@ -228,11 +672,7 @@
     
     <tags>
       
-      <tag>Spring</tag>
-      
-      <tag>Spring Framework</tag>
-      
-      <tag>入门</tag>
+      <tag>Spring,Spring Framework,入门</tag>
       
     </tags>
     
