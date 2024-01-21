@@ -248,7 +248,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          715 字
+          2.2k 字
         
       </span>
     
@@ -259,7 +259,7 @@
         
         
         
-          6 分钟
+          19 分钟
         
       </span>
     
@@ -322,6 +322,21 @@
 <p>下面图示显示了Spring工作原理的高级视图。您的应用程序类与配置元数据结合在一起，因此在<code>ApplicationContext</code>被创建和初始化后，您将拥有一个完全配置和可执行的系统或应用程序。</p>
 <img src="https://raw.githubusercontent.com/1515biubiubiu/img/main/spring%20framework/Figure%201.%20The%20Spring%20IoC%20container.png" srcset="/img/loading.gif" lazyload alt="Figure 1. The Spring IoC container"  />
 <h2 id="配置元数据">配置元数据</h2>
+<p>如上图所示，Spring IoC容器使用一种形式的配置元数据。此配置元数据代表您作为应用程序开发人员如何告诉Spring容器实例化、配置和组装应用程序中的对象。</p>
+<p>配置元数据传统上以简单直观的XML格式提供，本章大部分内容都使用这种格式来传达Spring IoC容器的关键概念和特性。</p>
+<blockquote>
+<p>基于XML的元数据并不是唯一允许的配置元数据形式。Spring IoC容器本身与实际写入配置元数据的格式完全解藕。如今，许多开发人员为其Spring应用程序选择<a href="/64cf65f">基于Java的配置</a>。</p>
+</blockquote>
+<p>有关在Spring容器中使用其他形式元数据的信息，请参阅：</p>
+<p><a href="/db8fd3f5">基于注释的配置</a>：使用基于注释的配置元数据定义bean。</p>
+<p><a href="/64cf65f">基于Java的配置</a>：使用Java而不是XML文件来定义应用程序类外部的Bean。要使用这些功能，请参阅<code>@Configuration</code>、<code>@Bean</code>、<code>@Import</code>和<code>DependsOn</code>注释。</p>
+<p>Spring配置由容器必须管理的至少一个（通常是多个）bean定义组成。基于XML的配置元数据将这些bean配置为顶级<code>&lt;beans/&gt;</code>元素内的<code>&lt;bean/&gt;</code>元素。Java配置通常在<code>@Configuration</code>类中使用带<code>@Bean</code>注释的方法。</p>
+<p>这些bean定义对应于构成应用程序的实际对象。通常，您定义服务层对象、持久层对象（例如存储库或数据访问对象（DAO））、表示对象（例如Web控制器）、基础结构对象（例如JPA<code>EntityManagerFactory</code>和JMS队列）等。通常，人们不会在容器中配置细粒度的域对象，因为创建和加载域对象通常是存储库和业务逻辑的责任。</p>
+<p>以下示例显示了基于XML的配置元数据的基本结构：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span></span><br><span class="hljs-tag">	<span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span><br><span class="hljs-tag">	<span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans</span></span><br><span class="hljs-string"><span class="hljs-tag">		https://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span> （1）（2）<br>		<span class="hljs-comment">&lt;!-- collaborators and configuration for this bean go here --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- collaborators and configuration for this bean go here --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span><br><br>	<span class="hljs-comment">&lt;!-- more bean definitions go here --&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>（1）id 属性是一个字符串，用于标识各个 bean 定义。</p>
+<p>（2）class属性定义bean的类型并使用完全限定的类名。</p>
+<p><code>id</code>属性的值可用于引用协作对象。本示例中未显示用于引用协作对象的XML。请参阅依赖关系以获取更多信息。</p>
 
                 
               </div>
