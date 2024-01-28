@@ -6,7 +6,7 @@
   <link href="https://1515biubiubiu.github.io/atom.xml" rel="self"/>
   
   <link href="https://1515biubiubiu.github.io/"/>
-  <updated>2023-07-29T12:37:30.000Z</updated>
+  <updated>2024-01-28T17:46:56.000Z</updated>
   <id>https://1515biubiubiu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>21、Resources</title>
+    <link href="https://1515biubiubiu.github.io/8b5f366f/"/>
+    <id>https://1515biubiubiu.github.io/8b5f366f/</id>
+    <published>2024-01-28T17:46:56.000Z</published>
+    <updated>2024-01-28T17:46:56.000Z</updated>
+    
+    
+    
+    
+    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
+    
+    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
+    
+    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
+    
+    <category term="核心技术" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Resources" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/Resources/"/>
+    
+    
+    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>20、BeanFactory API</title>
@@ -537,35 +562,6 @@
     
     
     <category term="代码结构与规范" scheme="https://1515biubiubiu.github.io/tags/%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84%E4%B8%8E%E8%A7%84%E8%8C%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2、概述</title>
-    <link href="https://1515biubiubiu.github.io/785d8438/"/>
-    <id>https://1515biubiubiu.github.io/785d8438/</id>
-    <published>2023-05-27T16:17:24.000Z</published>
-    <updated>2023-07-23T14:00:10.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;Spring Framework</summary>
-        
-      
-    
-    
-    
-    <category term="Java" scheme="https://1515biubiubiu.github.io/categories/Java/"/>
-    
-    <category term="Spring Framework" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/"/>
-    
-    <category term="入门" scheme="https://1515biubiubiu.github.io/categories/Java/Spring-Framework/%E5%85%A5%E9%97%A8/"/>
-    
-    
-    <category term="Spring,Spring Framework,入门" scheme="https://1515biubiubiu.github.io/tags/Spring-Spring-Framework-%E5%85%A5%E9%97%A8/"/>
     
   </entry>
   

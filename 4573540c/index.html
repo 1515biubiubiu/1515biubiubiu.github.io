@@ -248,7 +248,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          2.5k 字
         
       </span>
     
@@ -259,7 +259,7 @@
         
         
         
-          19 分钟
+          21 分钟
         
       </span>
     
@@ -336,7 +336,13 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">beans</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans&quot;</span></span><br><span class="hljs-tag">	<span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span><br><span class="hljs-tag">	<span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://www.springframework.org/schema/beans</span></span><br><span class="hljs-string"><span class="hljs-tag">		https://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span> （1）（2）<br>		<span class="hljs-comment">&lt;!-- collaborators and configuration for this bean go here --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span><br><br>	<span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- collaborators and configuration for this bean go here --&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">bean</span>&gt;</span><br><br>	<span class="hljs-comment">&lt;!-- more bean definitions go here --&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">beans</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>（1）id 属性是一个字符串，用于标识各个 bean 定义。</p>
 <p>（2）class属性定义bean的类型并使用完全限定的类名。</p>
-<p><code>id</code>属性的值可用于引用协作对象。本示例中未显示用于引用协作对象的XML。请参阅依赖关系以获取更多信息。</p>
+<p><code>id</code>属性的值可用于引用协作对象。本示例中未显示用于引用协作对象的XML。请参阅<a href="/639e8e28">依赖关系</a>以获取更多信息。</p>
+<h2 id="实例化容器">实例化容器</h2>
+<p>提供给<code>ApplicationContext</code>构造函数的位置路径是资源字符串，让容器从各种外部资源加载配置元数据，例如本地文件系统、Java CLASSPATH、等等。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">ApplicationContext</span> <span class="hljs-variable">context</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ClassPathXmlApplicationContext</span>(<span class="hljs-string">&quot;services.xml&quot;</span>, <span class="hljs-string">&quot;daos.xml&quot;</span>);<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>了解Spring的Ioc容器后，您可能想了解更多关于Spring的<code>Resource</code>抽象（如<a href="/8b5f366f">Resources</a>中所述）的信息，它提供了一种方便的机制，用于从URI语法中定义的位置读取InputStream。特别是，<code>Resource</code>路径用于构造应用程序上下文，如应用程序上下文和资源路径中所述。</p>
+</blockquote>
 
                 
               </div>
@@ -513,7 +519,7 @@
         aria-expanded="true"
       >
         Java
-        <span class="list-group-count">(20)</span>
+        <span class="list-group-count">(21)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -540,7 +546,7 @@
         aria-expanded="true"
       >
         Spring Framework
-        <span class="list-group-count">(20)</span>
+        <span class="list-group-count">(21)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -567,7 +573,7 @@
         aria-expanded="true"
       >
         入门
-        <span class="list-group-count">(20)</span>
+        <span class="list-group-count">(21)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -612,7 +618,7 @@
         aria-expanded="true"
       >
         核心技术
-        <span class="list-group-count">(18)</span>
+        <span class="list-group-count">(19)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -810,6 +816,43 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">20、BeanFactory API</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Resources"
+        id="heading-ddcf50c29294d4414f3f7c1bbc892cb5" role="tab" data-toggle="collapse" href="#collapse-ddcf50c29294d4414f3f7c1bbc892cb5"
+        aria-expanded="false"
+      >
+        Resources
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-ddcf50c29294d4414f3f7c1bbc892cb5"
+           role="tabpanel" aria-labelledby="heading-ddcf50c29294d4414f3f7c1bbc892cb5">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/8b5f366f/" title="21、Resources"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">21、Resources</span>
         </a>
       
     
